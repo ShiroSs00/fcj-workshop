@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 ### Week 1 Objectives:
 
 - Connect and get acquainted with members of First Cloud Journey.
@@ -20,20 +16,20 @@ pre: " <b> 1.1. </b> "
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                                  |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | --------------------------------------------------- |
 | 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 09/08/2025 | 09/08/2025      |
-| 3   | - Explore about AWS and its types of services <br>&emsp; + Compte <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                             | 09/09/2025 | 09/09/2025      | <https://cloudjourney.awsstudygroup.com/1-explore/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 09/10/2025 | 09/10/2025      | <https://cloudjourney.awsstudygroup.com/>           |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP <br>                              | 09/11/2025 | 09/11/2025      | <https://cloudjourney.awsstudygroup.com/>           |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 09/12/2025 | 09/12/2025      | <https://cloudjourney.awsstudygroup.com/>           |
+| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 09/09/2025 | 09/09/2025      | <https://cloudjourney.awsstudygroup.com/1-explore/> |
+| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 09/10/2025 | 09/10/2025      | <https://000001.awsstudygroup.com/>                 |
+| 5   | - Cost Management with AWS Budgets: <br>&emsp; + Cost Budget <br>&emsp; + Usage Budget <br>&emsp; + Reservation Budget <br>&emsp; + Savings Plans Budget <br><br>                                      | 09/11/2025 | 09/11/2025      | <https://000007.awsstudygroup.com/>                 |
+| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 09/12/2025 | 09/12/2025      | <https://docs.aws.amazon.com/ec2/>                  |
 
 ### Week 1 Achievements:
 
-- Understood what AWS is and mastered the basic service groups:
+- Understood AWS fundamentals and basic service categories:
 
-  - Compute
-  - Storage
-  - Networking
-  - Database
-  - ...
+  - Compute services: EC2, Lambda, Lightsail
+  - Storage services: S3, EBS, Glacier
+  - Database services: DynamoDB, RDS, Aurora
+  - Networking services: VPC, CloudFront, Route 53
+  - Developer Tools: CodePipeline, CodeBuild, CodeDeploy
 
 - Successfully created and configured an AWS Free Tier account.
 
@@ -44,7 +40,6 @@ pre: " <b> 1.1. </b> "
   - Access Key
   - Secret Key
   - Default Region
-  - ...
 
 - Used AWS CLI to perform basic operations such as:
 
@@ -55,5 +50,10 @@ pre: " <b> 1.1. </b> "
   - Check information about running services
   - ...
 
-- Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-- ...
+- Successfully completed EC2 hands-on practice:
+  - Launched EC2 t2.micro instance (Free Tier eligible)
+  - Created and configured Security Groups for SSH, HTTP, HTTPS
+  - Generated and downloaded EC2 key pair
+  - Connected to EC2 instance via SSH
+  - Attached EBS volume and mounted filesystem
+  - Installed and configured web server

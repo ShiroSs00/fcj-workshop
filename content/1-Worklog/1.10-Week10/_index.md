@@ -5,53 +5,82 @@ weight: 2
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Learn advanced ASP.NET Core features: authentication, authorization, API security.
+- Integrate ASP.NET Core API with AWS services.
+- Practic
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task                                                                                   | Start Date | Completion Date | Reference Material                                                        |
+| --- | -------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------------------- |
+| 1   | Learn about JWT authentication and Bearer tokens in ASP.NET Core                       | 11/10/2025 | 11/10/2025      | https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt |
+| 2   | Learn about authorization and role-based access control (RBAC)                         | 11/11/2025 | 11/11/2025      | https://learn.microsoft.com/en-us/aspnet/core/security/authorization/     |
+| 3   | Practice: Implement JWT authentication in API, create login endpoint                   | 11/12/2025 | 11/12/2025      | https://learn.microsoft.com/en-us/aspnet/core/security/                   |
+| 4   | Learn about integrating ASP.NET Core with AWS services (Cognito, S3, DynamoDB)         | 11/13/2025 | 11/13/2025      | https://docs.aws.amazon.com/sdk-for-net/                                  |
+| 5   | Practice: Integrate API with AWS Cognito for user management                           | 11/14/2025 | 11/14/2025      | https://docs.aws.amazon.com/cognito/latest/developerguide/                |
+| 6   | Practice: Integrate API with S3 for file upload/download and DynamoDB for data storage | 11/15/2025 | 11/15/2025      | https://docs.aws.amazon.com/sdk-for-net/                                  |
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Successfully learned JWT (JSON Web Token) authentication:
 
-* Successfully created and configured an AWS Free Tier account.
+  - JWT structure and claims
+  - Token generation and validation
+  - Bearer token authorization
+  - Token expiration and refresh tokens
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Successfully implemented authentication in ASP.NET Core API:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+  - Created login endpoint that generates JWT tokens
+  - Configured JWT validation middleware
+  - Protected endpoints with [Authorize] attribute
+  - Implemented secure password handling
 
-* Used AWS CLI to perform basic operations such as:
+- Successfully learned authorization and access control:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+  - Role-based access control (RBAC)
+  - Claims-based authorization
+  - Authorization policies and requirements
+  - Implementing role checks in endpoints
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Successfully implemented role-based authorization:
+
+  - Created different user roles (Admin, User, etc.)
+  - Protected endpoints with role requirements
+  - Implemented authorization policies
+  - Tested access control with different roles
+
+- Successfully integrated ASP.NET Core API with AWS Cognito:
+
+  - Configured Cognito user pool in API
+  - Implemented user registration using Cognito SDK
+  - Implemented user login and JWT token generation
+  - Integrated Cognito for user management and authentication
+
+- Successfully integrated ASP.NET Core API with AWS S3:
+
+  - Uploaded files to S3 from API endpoints
+  - Downloaded files from S3 through API
+  - Managed S3 bucket operations from application
+  - Implemented proper error handling for S3 operations
+
+- Successfully integrated ASP.NET Core API with AWS DynamoDB:
+
+  - Created DynamoDB client in ASP.NET Core
+  - Implemented CRUD operations for DynamoDB
+  - Stored and retrieved data from DynamoDB tables
+  - Integrated database operations with API endpoints
+
+- Successfully built complete application combining:
+
+  - ASP.NET Core API for business logic
+  - JWT authentication with Cognito
+  - S3 integration for file storage
+  - DynamoDB integration for data persistence
+  - Proper error handling and validation
+  - CloudWatch logging for monitoring
+
+- Gained ability to build enterprise-grade, secure APIs integrated with AWS services.

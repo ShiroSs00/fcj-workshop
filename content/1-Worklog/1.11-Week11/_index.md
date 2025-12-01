@@ -5,53 +5,40 @@ weight: 2
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 11 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Learn advanced ASP.NET Core features: logging, caching, and performance optimization.
+- Practice building scalable APIs with proper logging and monitoring.
+- Learn about API documentation with Swagger/OpenAPI.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task                                                                                | Start Date | Completion Date | Reference Material                                                                       |
+| --- | ----------------------------------------------------------------------------------- | ---------- | --------------- | ---------------------------------------------------------------------------------------- |
+| 1   | Learn about logging frameworks: Serilog, NLog, and built-in logging in ASP.NET Core | 11/17/2025 | 11/17/2025      | https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/                      |
+| 2   | Practice: Configure Serilog, implement structured logging, log to multiple sinks    | 11/18/2025 | 11/18/2025      | https://serilog.net/                                                                     |
+| 3   | Learn about caching: in-memory caching, distributed caching, cache strategies       | 11/19/2025 | 11/19/2025      | https://learn.microsoft.com/en-us/aspnet/core/performance/caching/                       |
+| 4   | Practice: Implement in-memory cache and distributed caching in API                  | 11/20/2025 | 11/20/2025      | https://learn.microsoft.com/en-us/aspnet/core/performance/caching/distributed            |
+| 5   | Learn about API documentation: Swagger/OpenAPI, API documentation best practices    | 11/21/2025 | 11/21/2025      | https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger |
+| 6   | Practice: Add Swagger documentation to API, document endpoints and models           | 11/22/2025 | 11/22/2025      | https://swagger.io/                                                                      |
 
 ### Week 11 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Successfully learned and implemented structured logging with Serilog in ASP.NET Core.
 
-* Successfully created and configured an AWS Free Tier account.
+- Configured logging to multiple sinks: Console, File, and AWS CloudWatch.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Implemented in-memory and distributed caching strategies to improve API performance.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Added cache invalidation and TTL policies for data consistency.
 
-* Used AWS CLI to perform basic operations such as:
+- Successfully integrated Swagger/OpenAPI documentation into API.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+- Documented all API endpoints with XML comments and examples.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Tested API functionality through interactive Swagger UI.
+
+- Integrated comprehensive monitoring with CloudWatch for real-time log analysis.
+
+- Gained ability to build production-ready, well-documented, and monitored APIs.
