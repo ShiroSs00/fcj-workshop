@@ -5,7 +5,6 @@ weight: 1
 chapter: false
 ---
 
-    
 # Internship Report
 
 {{% notice warning %}}
@@ -13,13 +12,14 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Van A
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Full Name:** Ho Tran Quan
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Phone Number:** 0962401194
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **Email:** quanhtse180175@fpt.edu.vn
+
+&emsp; **University:** FPT University
 
 &emsp; **Major:** Information Technology
 
