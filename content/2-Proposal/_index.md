@@ -1,115 +1,216 @@
 ---
-title: "Proposal"
-date: "`r Sys.Date()`"
+title: "Proposal "
+date: 2025-09-09
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+# Video Sharing Platform
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+## 1.Executive Summary
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+This proposal outlines the development of a scalable Video Sharing Platform leveraging AWS cloud services. The platform will enable users to upload, stream, and share video content with features including user authentication, content management, and real-time video streaming.
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+Key objectives:
+
+- Build a secure, scalable video sharing platform
+- Implement user authentication and authorization
+- Provide high-quality video streaming capabilities
+- Ensure cost-effective infrastructure management
+- Deliver seamless user experience across devices
+
+The solution utilizes AWS services including Amplify for frontend hosting, Cognito for authentication, S3 for storage, CloudFront for content delivery, and Interactive Video Service for streaming capabilities.
+
+## 2.Problem Statement
+
+### What's the Problem?
+
+Current video sharing solutions face several challenges:
+
+- High infrastructure costs for video storage and streaming
+- Complex setup and maintenance requirements
+- Limited scalability during peak usage
+- Security vulnerabilities in user authentication
+- Poor video quality and buffering issues
 
 ### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+
+Our AWS-based video sharing platform addresses these challenges by:
+
+- Leveraging AWS's cost-effective, pay-as-you-use pricing model
+- Utilizing managed services to reduce operational overhead
+- Implementing auto-scaling capabilities for handling traffic spikes
+- Providing enterprise-grade security through AWS Cognito
+- Delivering high-quality video streaming via Amazon IVS and CloudFront
 
 ### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+**Cost Savings:**
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+- 40-60% reduction in infrastructure costs compared to traditional hosting
+- No upfront hardware investments required
+- Pay-per-use model optimizes operational expenses
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+**Performance Improvements:**
+
+- 99.9% uptime availability
+- Global content delivery with low latency
+- Auto-scaling handles 10x traffic increases seamlessly
+
+**Business Value:**
+
+- Faster time-to-market (3-6 months vs 12+ months)
+- Enhanced user experience drives higher engagement
+- Scalable architecture supports business growth
+
+## 3.Solution Architecture
+
+![Architecture Diagram](https://cuti-duck.github.io/hugo-aws-project/images/architecdiagram.png)
 
 ### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+
+**Amplify:** Frontend hosting and deployment platform for React/Vue.js applications with CI/CD integration.
+
+**Cognito:** User authentication and authorization service providing secure sign-up, sign-in, and access control.
+
+**App Runner:** Containerized backend API hosting with automatic scaling and load balancing.
+
+**DynamoDB:** NoSQL database for storing user profiles, video metadata, and application data.
+
+**S3:** Object storage for video files, thumbnails, and static assets with versioning and lifecycle policies.
+
+**CloudFront:** Global CDN for fast content delivery and video streaming with edge caching.
+**Amazon IVS (Interactive Video Service):** Real-time video streaming service for live broadcasts and on-demand content with low latency.
+
+**Code Pipeline:** CI/CD pipeline for automated testing, building, and deployment.
+
+**Code Build:** Build service for compiling source code, running tests, and creating deployment packages.
+
+**Elastic Container Registry:** Docker container registry for storing and managing application images.
 
 ### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+**Frontend Layer:**
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+- React-based web application hosted on Amplify
+- Responsive design supporting mobile and desktop
+- Real-time video player with adaptive bitrate streaming
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+**API Layer:**
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+- RESTful APIs built with Node.js/Express
+- Containerized and deployed on App Runner
+- JWT-based authentication integration
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+**Data Layer:**
 
-Total: $0.7/month, $8.40/12 months
+- DynamoDB tables for user data and video metadata
+- S3 buckets for video storage with intelligent tiering
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+**Security Layer:**
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+- Cognito user pools for authentication
+- IAM roles and policies for access control
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+**Streaming Architecture:**
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+- Amazon IVS for live streaming capabilities
+- CloudFront for global video distribution
+- Adaptive bitrate streaming for optimal quality
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+### Use Cases
+
+**Live Streaming Events:**
+
+- Real-time broadcasting of conferences, webinars, and corporate events
+- Multi-bitrate streaming for optimal viewer experience
+
+**Video On Demand (VOD):**
+
+- Upload and share educational content, tutorials, and training materials
+- Secure content access with user permissions
+
+**Social Video Sharing:**
+
+- User-generated content sharing
+- Community features with comments and ratings
+
+## 4.Technical Implementation
+
+### Phase 1: Infrastructure Setup
+
+**AWS Account Configuration:**
+
+- Configure IAM roles and policies for least privilege access
+
+**Core Services Deployment:**
+
+- Deploy DynamoDB tables with proper indexing
+- Configure S3 buckets with encryption and lifecycle policies
+- Set up Cognito user pools and identity pools
+
+### Phase 2: Backend Development
+
+**API Development:**
+
+- Build RESTful APIs using Node.js/Express framework
+- Implement JWT authentication with Cognito integration
+- Create video upload/processing endpoints
+- Develop user management and content APIs
+
+**Database Schema:**
+
+- Users table: user_id, email, profile_data, created_at
+- Videos table: video_id, user_id, metadata, upload_status
+- Analytics table: event_id, user_id, video_id, timestamp, action
+
+**Containerization:**
+
+- Create Docker containers for API services
+- Push images to Elastic Container Registry
+- Configure App Runner for automatic deployment
+
+### Phase 3: Frontend Development
+
+**React Application:**
+
+- Implement responsive UI components
+- Integrate AWS Amplify SDK for authentication
+- Build video upload interface with progress tracking
+- Create video player with adaptive streaming
+
+**Key Features:**
+
+- User registration/login with email verification
+- Video upload with drag-and-drop functionality
+- Real-time video streaming with quality selection
+- User dashboard for content management
+
+### Phase 4: Streaming Integration
+
+**Amazon IVS Setup:**
+
+- Configure streaming channels and playback URLs
+- Implement adaptive bitrate streaming
+- Set up recording and archival workflows
+
+**CloudFront Configuration:**
+
+- Create distributions for video content delivery
+- Configure edge locations for global reach
+- Implement caching strategies for optimal performance
+
+### Phase 5: CI/CD Pipeline
+
+**Automated Deployment:**
+
+- Configure CodePipeline for source-to-production workflow
+- Set up CodeBuild for automated testing and building
+- Implement blue-green deployment strategy
+
+**Testing Strategy:**
+
+- Unit tests for API endpoints
+- Integration tests for AWS service interactions
+- Load testing for performance validation

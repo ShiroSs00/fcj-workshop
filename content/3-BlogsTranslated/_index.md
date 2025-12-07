@@ -22,16 +22,4 @@ Network Device Interface (NDI) technology has revolutionized how media content c
 
 ### [Blog 3 - Dynamically configuring job settings with AWS Elemental MediaConvert ](3.3-Blog3/)
 
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
-
-### [Blog 4 - ...](3.4-Blog4/)
-
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
-
-### [Blog 5 - ...](3.5-Blog5/)
-
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
-
-### [Blog 6 - ...](3.6-Blog6/)
-
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+AWS Elemental MediaConvert is a powerful video transcoding service that enables media organizations to convert video content into multiple formats optimized for different platforms and devices. While basic transcoding is straightforward, many production workflows require dynamic configuration of job settings based on input content characteristics, business rules, or customer requirements. This blog explores strategies for dynamically configuring MediaConvert jobs to create flexible, scalable video processing pipelines.
