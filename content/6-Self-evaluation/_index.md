@@ -6,12 +6,8 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-During my internship at **[Amazon Web Services Vietnam Co., Ltd.]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.
+During my internship at **[Amazon Web Services Vietnam Co., Ltd.]** from **[09/09/2025]** to **[12/12/2025]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
+I participated in **[Cloud Developer]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.
 
 In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
 
@@ -35,5 +31,13 @@ To objectively reflect on my internship period, I would like to evaluate myself 
 ### Needs Improvement
 
 - Strengthen discipline and strictly comply with the rules and regulations of the company or any organization
+  - Set clear daily schedules and track adherence to deadlines
+  - Develop better time management habits
 - Improve problem-solving thinking
+  - Practice analytical thinking when facing challenges
+  - Learn from case studies and real-world examples
+  - Seek mentorship from experienced colleagues
 - Enhance communication skills in both daily interactions and professional contexts, including handling situations effectively
+  - Participate in presentation and public speaking opportunities
+  - Practice active listening and clear articulation of ideas
+  - Develop conflict resolution and negotiation skills
