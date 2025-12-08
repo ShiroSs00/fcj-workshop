@@ -6,12 +6,6 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-This section will list and introduce the blogs you have translated. For example:
-
 ### [Blog 1 - Virtual Production on the Cloud: Grup Mediaprо Unleashes Creativity with AWS](3.1-Blog1/)
 
 Virtual production is revolutionizing the media and entertainment industry. Grup Mediaprо, a leading Spanish production company, has successfully leveraged AWS cloud services to transform their production workflows and unlock new creative possibilities.
