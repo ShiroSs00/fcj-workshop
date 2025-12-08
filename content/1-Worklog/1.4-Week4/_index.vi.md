@@ -1,59 +1,53 @@
 ---
-title: "Worklog Tuần 4"
+title: "Nhật ký công việc - Tuần 4"
 date: "`r Sys.Date()`"
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 4:
 
-### Mục tiêu tuần 4:
+- Tìm hiểu về Lambda (serverless computing) và kiến trúc hướng sự kiện.
+- Hiểu về API Gateway để tạo REST APIs.
+- Thực hành CloudWatch để giám sát và ghi nhật ký.
+- Tích hợp nhiều dịch vụ AWS vào một ứng dụng hoàn chỉnh.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các nhiệm vụ cần thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày | Nhiệm vụ                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                      |
+| ---- | ------------------------------------------------------------------------------------------------ | ------------ | --------------- | --------------------------------------- |
+| 1    | Tìm hiểu nền tảng Lambda: functions, triggers, runtime, execution role, permissions              | 09/29/2025   | 09/29/2025      | https://docs.aws.amazon.com/lambda/     |
+| 2    | Thực hành Lambda: Tạo function, kiểm tra invocation, cấu hình trigger, đặt environment variables | 09/30/2025   | 09/30/2025      | https://cloudjourney.awsstudygroup.com/ |
+| 3    | Tìm hiểu API Gateway: REST APIs, endpoints, methods, request/response mapping, authorization     | 10/01/2025   | 10/01/2025      | https://docs.aws.amazon.com/apigateway/ |
+| 4    | Thực hành API Gateway: Tạo REST API, cấu hình resources và methods, tích hợp với Lambda          | 10/02/2025   | 10/02/2025      | https://cloudjourney.awsstudygroup.com/ |
+| 5    | Tìm hiểu CloudWatch: monitoring, logging, metrics, alarms, dashboards                            | 10/03/2025   | 10/03/2025      | https://docs.aws.amazon.com/cloudwatch/ |
+| 6    | Thực hành CloudWatch: Tạo logs, đặt metrics, cấu hình alarms, xây dựng dashboards để giám sát    | 10/04/2025   | 10/04/2025      | https://cloudjourney.awsstudygroup.com/ |
 
+### Thành tựu Tuần 4:
 
-### Kết quả đạt được tuần 4:
+- Hiểu rõ serverless computing với Lambda và kiến trúc hướng sự kiện.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Thành công tạo và kiểm tra Lambda functions với các execution roles và permissions phù hợp.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Làm quen với API Gateway và học cách tạo REST APIs và tích hợp với Lambda.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- Cài đặt và cấu hình CloudWatch để giám sát, ghi nhật ký và tạo alarms.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Sử dụng CloudWatch để thực hiện các hoạt động giám sát như:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+  - Xem Lambda function logs
+  - Tạo custom metrics
+  - Thiết lập CloudWatch alarms
+  - Xây dựng monitoring dashboards
+  - Phân tích logs với CloudWatch Logs Insights
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Thành công hoàn thành dự án tích hợp kết hợp:
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+  - Lambda cho xử lý serverless
+  - API Gateway cho REST API endpoints
+  - S3 cho triggers lưu trữ objects
+  - DynamoDB cho lưu trữ dữ liệu
+  - CloudWatch cho giám sát toàn diện
 
-
+- Có được khả năng thiết kế các ứng dụng hướng sự kiện và xây dựng các giải pháp serverless có thể mở rộng trên AWS.

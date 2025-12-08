@@ -1,59 +1,33 @@
 ---
-title: "Worklog Tuần 7"
+title: "Nhật ký công việc - Tuần 7"
 date: "`r Sys.Date()`"
 weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 7:
 
-### Mục tiêu tuần 7:
+- Thực hành CloudFormation để quản lý cơ sở hạ tầng dưới dạng mã.
+- Thực hành các tính năng nâng cao của EC2 bao gồm Auto Scaling và Load Balancing.
+- Xây dựng cơ sở hạ tầng tự động và có thể mở rộng sử dụng CloudFormation templates.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các nhiệm vụ cần thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày | Nhiệm vụ                                                                    | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                                                          |
+| ---- | --------------------------------------------------------------------------- | ------------ | --------------- | --------------------------------------------------------------------------- |
+| 1    | Thực hành CloudFormation: Viết YAML templates, tạo và cập nhật stacks       | 10/20/2025   | 10/20/2025      | https://cloudjourney.awsstudygroup.com/7-infrastructure/7-1-cloudformation/ |
+| 2    | Thực hành CloudFormation: Template parameters, outputs, conditions          | 10/21/2025   | 10/21/2025      | https://cloudjourney.awsstudygroup.com/7-infrastructure/7-1-cloudformation/ |
+| 3    | Thực hành EC2: Auto Scaling groups, launch templates, scaling policies      | 10/22/2025   | 10/22/2025      | https://cloudjourney.awsstudygroup.com/4-compute/4-1-ec2/                   |
+| 4    | Thực hành Load Balancing: Application Load Balancer, Elastic Load Balancing | 10/23/2025   | 10/23/2025      | https://cloudjourney.awsstudygroup.com/5-network/5-2-load-balancing/        |
+| 5    | Dự án: Triển khai ứng dụng đa tầng với CloudFormation (VPC, EC2, RDS, ALB)  | 10/24/2025   | 10/24/2025      | https://cloudjourney.awsstudygroup.com/7-infrastructure/                    |
+| 6    | Kiểm thử: Kiểm tra auto scaling, load balancer failover, stack updates      | 10/25/2025   | 10/25/2025      | https://cloudjourney.awsstudygroup.com/7-infrastructure/                    |
 
+### Thành tựu Tuần 7:
 
-### Kết quả đạt được tuần 7:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Thành công viết CloudFormation templates cho các thành phần cơ sở hạ tầng.
+- Triển khai và cập nhật CloudFormation stacks.
+- Cấu hình EC2 Auto Scaling với các scaling policies phù hợp.
+- Thiết lập Application Load Balancer với health checks.
+- Triển khai cơ sở hạ tầng đa tầng hoàn chỉnh với CloudFormation.
+- Kiểm thử các tình huống auto scaling và failover.

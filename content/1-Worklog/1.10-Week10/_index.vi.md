@@ -1,59 +1,86 @@
 ---
-title: "Worklog Tuần 10"
+title: "Nhật ký công việc - Tuần 10"
 date: "`r Sys.Date()`"
-weight: 2
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 10:
 
-### Mục tiêu tuần 10:
+- Tìm hiểu các tính năng nâng cao của ASP.NET Core: authentication, authorization, API security.
+- Tích hợp ASP.NET Core API với các dịch vụ AWS.
+- Thực hành xây dựng API an toàn tích hợp AWS.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các nhiệm vụ cần thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày | Nhiệm vụ                                                                               | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                                                        |
+| ---- | -------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------------------------------------------------------------- |
+| 1    | Tìm hiểu JWT authentication và Bearer tokens trong ASP.NET Core                        | 11/10/2025   | 11/10/2025      | https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt |
+| 2    | Tìm hiểu authorization và role-based access control (RBAC)                             | 11/11/2025   | 11/11/2025      | https://learn.microsoft.com/en-us/aspnet/core/security/authorization/     |
+| 3    | Thực hành: Triển khai JWT authentication trong API, tạo login endpoint                 | 11/12/2025   | 11/12/2025      | https://learn.microsoft.com/en-us/aspnet/core/security/                   |
+| 4    | Tìm hiểu tích hợp ASP.NET Core với các dịch vụ AWS (Cognito, S3, DynamoDB)             | 11/13/2025   | 11/13/2025      | https://docs.aws.amazon.com/sdk-for-net/                                  |
+| 5    | Thực hành: Tích hợp API với AWS Cognito để quản lý users                               | 11/14/2025   | 11/14/2025      | https://docs.aws.amazon.com/cognito/latest/developerguide/                |
+| 6    | Thực hành: Tích hợp API với S3 để upload/download files và DynamoDB để lưu trữ dữ liệu | 11/15/2025   | 11/15/2025      | https://docs.aws.amazon.com/sdk-for-net/                                  |
 
+### Thành tựu Tuần 10:
 
-### Kết quả đạt được tuần 10:
+- Thành công tìm hiểu JWT (JSON Web Token) authentication:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+  - Cấu trúc JWT và claims
+  - Tạo và xác thực tokens
+  - Bearer token authorization
+  - Token expiration và refresh tokens
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Thành công triển khai authentication trong ASP.NET Core API:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+  - Tạo login endpoint để tạo JWT tokens
+  - Cấu hình JWT validation middleware
+  - Bảo vệ endpoints với [Authorize] attribute
+  - Triển khai xử lý password an toàn
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Thành công tìm hiểu authorization và access control:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+  - Role-based access control (RBAC)
+  - Claims-based authorization
+  - Authorization policies và requirements
+  - Triển khai role checks trong endpoints
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Thành công triển khai role-based authorization:
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+  - Tạo các user roles khác nhau (Admin, User, v.v.)
+  - Bảo vệ endpoints với role requirements
+  - Triển khai authorization policies
+  - Kiểm thử access control với các roles khác nhau
 
+- Thành công tích hợp ASP.NET Core API với AWS Cognito:
 
+  - Cấu hình Cognito user pool trong API
+  - Triển khai user registration sử dụng Cognito SDK
+  - Triển khai user login và JWT token generation
+  - Tích hợp Cognito để quản lý users và authentication
+
+- Thành công tích hợp ASP.NET Core API với AWS S3:
+
+  - Upload files lên S3 từ API endpoints
+  - Download files từ S3 qua API
+  - Quản lý S3 bucket operations từ ứng dụng
+  - Triển khai error handling cho S3 operations
+
+- Thành công tích hợp ASP.NET Core API với AWS DynamoDB:
+
+  - Tạo DynamoDB client trong ASP.NET Core
+  - Triển khai CRUD operations cho DynamoDB
+  - Lưu trữ và lấy dữ liệu từ DynamoDB tables
+  - Tích hợp database operations với API endpoints
+
+- Thành công xây dựng ứng dụng hoàn chỉnh kết hợp:
+
+  - ASP.NET Core API cho business logic
+  - JWT authentication với Cognito
+  - S3 integration để lưu trữ files
+  - DynamoDB integration để lưu trữ dữ liệu
+  - Error handling và validation phù hợp
+  - CloudWatch logging để giám sát
+
+- Đạt được khả năng xây dựng enterprise-grade, secure APIs tích hợp với AWS services.

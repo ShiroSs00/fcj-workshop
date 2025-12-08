@@ -1,46 +1,47 @@
 ---
-title: "Các events đã tham gia"
+title: "Sự kiện Tham dự"
 date: "`r Sys.Date()`"
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+> Trong phần này, bạn nên liệt kê và mô tả chi tiết các sự kiện mà bạn đã tham gia trong thời gian thực tập hoặc kinh nghiệm làm việc.
+>
+> Mỗi sự kiện nên được trình bày ở định dạng Sự kiện 1, Sự kiện 2, Sự kiện 3..., cùng với các chi tiết sau:
+>
+> - Tên sự kiện
+> - Ngày và giờ
+> - Địa điểm (nếu có)
+> - Vai trò của bạn trong sự kiện (người tham dự, hỗ trợ sự kiện, người phát biểu, v.v.)
+> - Mô tả ngắn gọn về nội dung sự kiện và các hoạt động chính
+> - Kết quả hoặc giá trị đạt được (bài học, kỹ năng mới, đóng góp cho nhóm/dự án)
+> - Danh sách này giúp chứng minh sự tham gia thực tế của bạn cũng như các kỹ năng mềm và kinh nghiệm mà bạn đã đạt được từ mỗi sự kiện.
 
-> Trong phần này, các bạn cần liệt kê và mô tả chi tiết các sự kiện (event) mà mình đã tham gia trong suốt quá trình thực tập hoặc làm việc. 
-> 
-> Mỗi sự kiện nên được trình bày theo định dạng Event 1, Event 2, Event 3…, kèm theo các thông tin:
-> * Tên sự kiện
-> * Thời gian tổ chức
-> * Địa điểm (nếu có)
-> * Vai trò của bạn trong sự kiện (người tham dự, hỗ trợ tổ chức, diễn giả, v.v.)
-> * Mô tả ngắn gọn nội dung và hoạt động chính trong sự kiện
-> * Kết quả hoặc giá trị đạt được (bài học, kỹ năng mới, đóng góp cho nhóm/dự án)
-> * Việc liệt kê này giúp thể hiện rõ sự tham gia thực tế của bạn, cũng như các kỹ năng mềm và kinh nghiệm bạn đã tích lũy qua từng sự kiện.
+Trong thời gian thực tập, tôi đã tham gia hai sự kiện. Mỗi sự kiện là một trải nghiệm đáng nhớ đã cung cấp kiến thức mới, thú vị và hữu ích, cùng với những quà tặng và những khoảnh khắc tuyệt vời.
 
+### [Sự kiện 1](4.1-Event1/)
 
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời.
+**Tên Sự kiện:** AI/ML/GenAI trên AWS
 
-### [Event 1](4.1-Event1/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
+**Ngày & Giờ:** Thứ bảy, 15 tháng 11, 2025 | 8:30 AM – 12:00 PM
 
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
+**Địa điểm:** Văn phòng AWS Vietnam
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+**Vai trò:** Người tham dự
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+**Tóm tắt:** Workshop toàn diện về các dịch vụ AWS AI/ML bao gồm Amazon SageMaker, Generative AI với Amazon Bedrock, kỹ thuật prompt engineering, kiến trúc RAG, và Bedrock Agents. Đạt được kinh nghiệm hands-on với các mô hình nền tảng (Claude, Llama, Titan) và học các thực hành tốt nhất để xây dựng các ứng dụng AI sẵn sàng cho sản xuất.
 
+---
 
+### [Sự kiện 2](4.2-Event2/)
 
-### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
+**Tên Sự kiện:** DevOps trên AWS
 
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
+**Ngày & Giờ:** Thứ hai, 17 tháng 11, 2025 | 8:30 AM – 5:00 PM
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+**Địa điểm:** Văn phòng AWS Vietnam
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+**Vai trò:** Người tham dự
 
+**Tóm tắt:** Workshop DevOps cả ngày bao gồm CI/CD pipelines (CodeCommit, CodeBuild, CodeDeploy, CodePipeline), Infrastructure as Code (CloudFormation, AWS CDK), dịch vụ container (Docker, ECR, ECS, EKS), và các giải pháp giám sát (CloudWatch, X-Ray). Học được các chiến lược triển khai, thực hành tự động hóa, và các nghiên cứu trường hợp thực tế cho các quá trình biến đổi DevOps.

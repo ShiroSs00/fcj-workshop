@@ -1,58 +1,48 @@
 ---
-title: "Worklog Tuần 12"
+title: "Nhật ký công việc - Tuần 12"
 date: "`r Sys.Date()`"
-weight: 2
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-### Mục tiêu tuần 12:
+### Mục tiêu Tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Thiết kế và triển khai một nền tảng chia sẻ video hoàn chỉnh sử dụng AWS services và ASP.NET Core.
+- Tích hợp tất cả các dịch vụ AWS đã học trong thời gian thực tập.
+- Xây dựng ứng dụng production-ready với kiến trúc và deployment phù hợp.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các nhiệm vụ cần thực hiện trong tuần:
 
+| Ngày | Nhiệm vụ                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                      |
+| ---- | ------------------------------------------------------------------------------------------ | ------------ | --------------- | --------------------------------------- |
+| 1    | Thiết kế kiến trúc hệ thống: Định nghĩa các thành phần, dịch vụ AWS, data flow             | 11/24/2025   | 11/24/2025      | Tất cả các tuần trước                   |
+| 2    | Thiết lập cơ sở hạ tầng: Tạo VPC, security groups, EC2 instances, RDS database             | 11/25/2025   | 11/25/2025      | https://cloudjourney.awsstudygroup.com/ |
+| 3    | Triển khai backend API: Quản lý users, authentication, video metadata endpoints            | 11/26/2025   | 11/26/2025      | Các tuần ASP.NET Core trước             |
+| 4    | Triển khai video operations: Upload lên S3, lưu metadata trong DynamoDB, Lambda processing | 11/27/2025   | 11/27/2025      | Tuần 3, 4, 6                            |
+| 5    | Triển khai video delivery: Phát videos từ S3, streaming, CloudFront CDN                    | 11/28/2025   | 11/28/2025      | https://docs.aws.amazon.com/cloudfront/ |
+| 6    | Triển khai và giám sát: CloudFormation deployment, CloudWatch monitoring, testing          | 11/29/2025   | 11/29/2025      | Tuần 7, 8                               |
 
-### Kết quả đạt được tuần 12:
+### Thành tựu Tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Thành công thiết kế kiến trúc nền tảng chia sẻ video hoàn chỉnh tích hợp tất cả dịch vụ AWS.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Triển khai hệ thống quản lý users với JWT authentication và Cognito integration.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- Xây dựng chức năng upload video với S3 integration và pre-signed URLs.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Tạo hệ thống quản lý video metadata sử dụng DynamoDB với query hiệu quả.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- Triển khai xử lý video serverless sử dụng Lambda được trigger bởi S3 events.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Cấu hình CloudFront CDN để phân phối và streaming videos hiệu quả.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Thiết lập comprehensive monitoring và logging với CloudWatch và X-Ray.
 
+- Triển khai ứng dụng hoàn chỉnh sử dụng CloudFormation infrastructure as code.
 
+- Tự động hóa CI/CD pipeline với CodePipeline, CodeBuild, và CodeDeploy.
+
+- Thành công tích hợp tất cả các dịch vụ AWS đã học trong thời gian thực tập vào một ứng dụng production-ready.
+
+- Đạt được hiểu biết toàn diện về xây dựng, triển khai, và giám sát các ứng dụng cloud cấp enterprise.

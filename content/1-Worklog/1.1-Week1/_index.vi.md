@@ -5,55 +5,59 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
+
 {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
+### Mục tiêu Tuần 1:
 
-### Mục tiêu tuần 1:
+- Kết nối và làm quen với các thành viên của First Cloud Journey.
+- Hiểu về các dịch vụ AWS cơ bản, cách sử dụng Console & CLI.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các nhiệm vụ cần thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày | Nhiệm vụ                                                                                                                                                                                               | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                                  |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | --------------- | --------------------------------------------------- |
+| 2    | - Làm quen với các thành viên FCJ <br> - Đọc và ghi chú các quy tắc và quy định của đơn vị thực tập                                                                                                    | 09/08/2025   | 09/08/2025      |
+| 3    | - Tìm hiểu về AWS và các loại dịch vụ <br>&emsp; + Compute (Tính toán) <br>&emsp; + Storage (Lưu trữ) <br>&emsp; + Networking (Mạng) <br>&emsp; + Database (Cơ sở dữ liệu) <br>&emsp; + ... <br>       | 09/09/2025   | 09/09/2025      | <https://cloudjourney.awsstudygroup.com/1-explore/> |
+| 4    | - Tạo tài khoản AWS Free Tier <br> - Tìm hiểu về AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo tài khoản AWS <br>&emsp; + Cài đặt & cấu hình AWS CLI <br> &emsp; + Cách sử dụng AWS CLI | 09/10/2025   | 09/10/2025      | <https://000001.awsstudygroup.com/>                 |
+| 5    | - Quản lý chi phí với AWS Budgets: <br>&emsp; + Ngân sách Chi phí <br>&emsp; + Ngân sách Sử dụng <br>&emsp; + Ngân sách Reservation <br>&emsp; + Ngân sách Savings Plans <br><br>                      | 09/11/2025   | 09/11/2025      | <https://000007.awsstudygroup.com/>                 |
+| 6    | - **Thực hành:** <br>&emsp; + Khởi chạy EC2 instance <br>&emsp; + Kết nối qua SSH <br>&emsp; + Gắn một volume EBS                                                                                      | 09/12/2025   | 09/12/2025      | <https://docs.aws.amazon.com/ec2/>                  |
 
+### Thành tựu Tuần 1:
 
-### Kết quả đạt được tuần 1:
+- Hiểu rõ nền tảng AWS và các danh mục dịch vụ cơ bản:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+  - Dịch vụ Compute: EC2, Lambda, Lightsail
+  - Dịch vụ Storage: S3, EBS, Glacier
+  - Dịch vụ Database: DynamoDB, RDS, Aurora
+  - Dịch vụ Networking: VPC, CloudFront, Route 53
+  - Công cụ Developer: CodePipeline, CodeBuild, CodeDeploy
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Thành công tạo và cấu hình tài khoản AWS Free Tier.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- Làm quen với AWS Management Console và học cách tìm kiếm, truy cập và sử dụng các dịch vụ qua giao diện web.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Cài đặt và cấu hình AWS CLI trên máy tính, bao gồm:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+  - Access Key
+  - Secret Key
+  - Default Region
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Sử dụng AWS CLI để thực hiện các hoạt động cơ bản như:
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+  - Kiểm tra thông tin tài khoản & cấu hình
+  - Lấy danh sách các region
+  - Xem dịch vụ EC2
+  - Tạo và quản lý key pairs
+  - Kiểm tra thông tin về các dịch vụ đang chạy
+  - ...
 
-
+- Hoàn thành thành công bài thực hành EC2:
+  - Khởi chạy EC2 t2.micro instance (đủ điều kiện Free Tier)
+  - Tạo và cấu hình Security Groups cho SSH, HTTP, HTTPS
+  - Tạo và tải xuống EC2 key pair
+  - Kết nối đến EC2 instance qua SSH
+  - Gắn volume EBS và mount filesystem
+  - Cài đặt và cấu hình web server

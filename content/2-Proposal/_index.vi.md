@@ -1,108 +1,217 @@
 ---
-title: "Bản đề xuất"
-date: "`r Sys.Date()`"
+title: "Đề xuất"
+date: 2025-09-09
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+# Nền tảng Chia sẻ Video
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+## 1. Tóm tắt Điều hành
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+Đề xuất này trình bày phát triển một Nền tảng Chia sẻ Video có thể mở rộng tận dụng các dịch vụ AWS cloud. Nền tảng sẽ cho phép người dùng tải lên, phát trực tuyến, và chia sẻ nội dung video với các tính năng bao gồm xác thực người dùng, quản lý nội dung, và phát video trực tuyến trong thời gian thực.
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+Các mục tiêu chính:
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+- Xây dựng một nền tảng chia sẻ video an toàn, có thể mở rộng
+- Triển khai xác thực và ủy quyền người dùng
+- Cung cấp khả năng phát video chất lượng cao
+- Đảm bảo quản lý cơ sở hạ tầng hiệu quả về chi phí
+- Cung cấp trải nghiệm người dùng liền mạch trên các thiết bị
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+Giải pháp sử dụng các dịch vụ AWS bao gồm Amplify để lưu trữ frontend, Cognito để xác thực, S3 để lưu trữ, CloudFront để phân phối nội dung, và Interactive Video Service để phát trực tuyến.
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+## 2. Tuyên bố Vấn đề
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+### Vấn đề là gì?
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+Các giải pháp chia sẻ video hiện tại gặp phải nhiều thách thức:
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+- Chi phí cơ sở hạ tầng cao để lưu trữ và phát video
+- Yêu cầu cấu hình và bảo trì phức tạp
+- Khả năng mở rộng hạn chế trong thời gian sử dụng cao điểm
+- Các lỗ hổng bảo mật trong xác thực người dùng
+- Chất lượng video kém và các vấn đề về buffer
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+### Giải pháp
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+Nền tảng chia sẻ video dựa trên AWS của chúng tôi giải quyết các thách thức này bằng cách:
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+- Tận dụng mô hình định giá trả-khi-sử-dụng hiệu quả của AWS
+- Sử dụng các dịch vụ quản lý để giảm chi phí hoạt động
+- Triển khai khả năng tự động mở rộng để xử lý các đột biến lưu lượng
+- Cung cấp bảo mật cấp doanh nghiệp thông qua AWS Cognito
+- Cung cấp phát video chất lượng cao qua Amazon IVS và CloudFront
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+### Lợi ích và Lợi nhuận từ Đầu tư
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+**Tiết kiệm Chi phí:**
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+- Giảm 40-60% chi phí cơ sở hạ tầng so với hosting truyền thống
+- Không cần đầu tư phần cứng trước
+- Mô hình trả-khi-sử-dụng tối ưu hóa chi phí hoạt động
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+**Cải thiện Hiệu suất:**
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+- Tính sẵn sàng thời gian hoạt động 99,9%
+- Phân phối nội dung toàn cầu với độ trễ thấp
+- Tự động mở rộng xử lý tăng lưu lượng 10 lần một cách liền mạch
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+**Giá trị Kinh doanh:**
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+- Thời gian đưa ra thị trường nhanh hơn (3-6 tháng so với 12+ tháng)
+- Trải nghiệm người dùng được cải thiện thúc đẩy mức độ tương tác cao hơn
+- Kiến trúc có thể mở rộng hỗ trợ tăng trưởng kinh doanh
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+## 3. Kiến trúc Giải pháp
+
+![Sơ đồ Kiến trúc](https://cuti-duck.github.io/hugo-aws-project/images/architecdiagram.png)
+
+### Dịch vụ AWS Được sử dụng
+
+**Amplify:** Nền tảng lưu trữ frontend và triển khai cho các ứng dụng React/Vue.js với tích hợp CI/CD.
+
+**Cognito:** Dịch vụ xác thực và ủy quyền người dùng cung cấp đăng ký, đăng nhập và kiểm soát truy cập an toàn.
+
+**App Runner:** Lưu trữ API backend được container hóa với tự động mở rộng và cân bằng tải.
+
+**DynamoDB:** Cơ sở dữ liệu NoSQL để lưu trữ hồ sơ người dùng, siêu dữ liệu video, và dữ liệu ứng dụng.
+
+**S3:** Lưu trữ đối tượng cho các tệp video, hình nhỏ, và tài sản tĩnh với versioning và lifecycle policies.
+
+**CloudFront:** CDN toàn cầu để phân phối nội dung nhanh và phát video với edge caching.
+
+**Amazon IVS (Interactive Video Service):** Dịch vụ phát video trực tuyến cho các buổi phát sóng trực tiếp và nội dung theo yêu cầu với độ trễ thấp.
+
+**Code Pipeline:** Pipeline CI/CD để kiểm tra, xây dựng, và triển khai tự động.
+
+**Code Build:** Dịch vụ xây dựng để biên dịch mã nguồn, chạy các bài kiểm tra, và tạo các gói triển khai.
+
+**Elastic Container Registry:** Đăng ký container Docker để lưu trữ và quản lý hình ảnh ứng dụng.
+
+### Thiết kế Thành phần
+
+**Lớp Frontend:**
+
+- Ứng dụng web dựa trên React được lưu trữ trên Amplify
+- Thiết kế đáp ứng hỗ trợ di động và máy tính để bàn
+- Trình phát video thời gian thực với streaming bitrate thích ứng
+
+**Lớp API:**
+
+- API RESTful được xây dựng với Node.js/Express
+- Được container hóa và triển khai trên App Runner
+- Tích hợp xác thực dựa trên JWT
+
+**Lớp Dữ liệu:**
+
+- Bảng DynamoDB cho dữ liệu người dùng và siêu dữ liệu video
+- S3 buckets để lưu trữ video với phân tầng thông minh
+
+**Lớp Bảo mật:**
+
+- Nhóm người dùng Cognito để xác thực
+- IAM roles và policies để kiểm soát truy cập
+
+**Kiến trúc Phát trực tuyến:**
+
+- Amazon IVS cho khả năng phát trực tuyến
+- CloudFront để phân phối video toàn cầu
+- Streaming bitrate thích ứng để tối ưu hóa chất lượng
+
+### Các trường hợp sử dụng
+
+**Sự kiện Phát trực tuyến:**
+
+- Phát sóng thời gian thực của các hội nghị, webinars, và sự kiện công ty
+- Phát trực tuyến đa bitrate cho trải nghiệm xem tối ưu
+
+**Video theo yêu cầu (VOD):**
+
+- Tải lên và chia sẻ nội dung giáo dục, hướng dẫn, và tài liệu đào tạo
+- Truy cập nội dung an toàn với quyền người dùng
+
+**Chia sẻ Video Xã hội:**
+
+- Chia sẻ nội dung do người dùng tạo
+- Các tính năng cộng đồng với bình luận và xếp hạng
+
+## 4. Triển khai Kỹ thuật
+
+### Giai đoạn 1: Thiết lập Cơ sở hạ tầng
+
+**Cấu hình Tài khoản AWS:**
+
+- Cấu hình IAM roles và policies cho truy cập ít nhất đặc quyền
+
+**Triển khai Dịch vụ Cốt lõi:**
+
+- Triển khai bảng DynamoDB với indexing phù hợp
+- Cấu hình S3 buckets với encryption và lifecycle policies
+- Thiết lập nhóm người dùng Cognito và nhóm nhận dạng
+
+### Giai đoạn 2: Phát triển Backend
+
+**Phát triển API:**
+
+- Xây dựng API RESTful sử dụng framework Node.js/Express
+- Triển khai xác thực JWT với tích hợp Cognito
+- Tạo các endpoints tải lên/xử lý video
+- Phát triển API quản lý người dùng và nội dung
+
+**Lược đồ Cơ sở dữ liệu:**
+
+- Bảng Users: user_id, email, profile_data, created_at
+- Bảng Videos: video_id, user_id, metadata, upload_status
+- Bảng Analytics: event_id, user_id, video_id, timestamp, action
+
+**Container hóa:**
+
+- Tạo Docker containers cho các dịch vụ API
+- Đẩy hình ảnh lên Elastic Container Registry
+- Cấu hình App Runner để triển khai tự động
+
+### Giai đoạn 3: Phát triển Frontend
+
+**Ứng dụng React:**
+
+- Triển khai các thành phần UI đáp ứng
+- Tích hợp AWS Amplify SDK để xác thực
+- Xây dựng giao diện tải lên video với theo dõi tiến trình
+- Tạo trình phát video với streaming thích ứng
+
+**Các tính năng chính:**
+
+- Đăng ký/đăng nhập người dùng với xác minh email
+- Tải lên video với chức năng kéo và thả
+- Phát video trực tuyến thời gian thực với lựa chọn chất lượng
+- Bảng điều khiển người dùng để quản lý nội dung
+
+### Giai đoạn 4: Tích hợp Phát trực tuyến
+
+**Thiết lập Amazon IVS:**
+
+- Cấu hình các kênh phát trực tuyến và URL phát lại
+- Triển khai streaming bitrate thích ứng
+- Thiết lập các quy trình ghi âm và lưu trữ
+
+**Cấu hình CloudFront:**
+
+- Tạo các phân phối cho phân phối nội dung video
+- Cấu hình các vị trí edge để tiếp cận toàn cầu
+- Triển khai các chiến lược caching để tối ưu hóa hiệu suất
+
+### Giai đoạn 5: Pipeline CI/CD
+
+**Triển khai Tự động:**
+
+- Cấu hình CodePipeline cho quy trình từ nguồn đến sản xuất
+- Thiết lập CodeBuild để kiểm tra và xây dựng tự động
+- Triển khai chiến lược triển khai blue-green
+
+**Chiến lược Kiểm thử:**
+
+- Kiểm tra đơn vị cho các endpoints API
+- Kiểm tra tích hợp cho các tương tác dịch vụ AWS
+- Kiểm tra tải cho xác thực hiệu suất

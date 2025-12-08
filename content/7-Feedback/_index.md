@@ -1,62 +1,73 @@
 ---
-title: "Sharing and Feedback"
+title: "Chia sẻ và Phản hồi"
 date: "`r Sys.Date()`"
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud Journey program. This will help the FCJ team improve any shortcomings based on the following aspects:
+> Tại đây, bạn có thể tự do chia sẻ những ý kiến cá nhân của mình về trải nghiệm tham gia chương trình First Cloud Journey. Điều này sẽ giúp đội ngũ FCJ cải thiện những thiếu sót dựa trên các khía cạnh sau:
 
-### Overall Evaluation
+### Đánh giá Tổng thể
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+**1. Môi trường Làm việc**
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+Môi trường làm việc rất thân thiện và cởi mở. Các thành viên FCJ luôn sẵn sàng giúp đỡ bất cứ khi nào tôi gặp khó khăn, thậm chí cả ngoài giờ làm việc. Không gian làm việc sạch sẽ và thoải mái, giúp tôi tập trung tốt hơn. Tuy nhiên, tôi nghĩ sẽ rất tốt nếu có thêm các hoạt động giao lưu xã hội hoặc xây dựng tinh thần đội nhóm để tăng cường mối quan hệ.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**2. Hỗ trợ từ Mentor / Quản lý Nhóm**
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+Người hướng dẫn cung cấp hướng dẫn rất chi tiết, giải thích rõ ràng khi tôi không hiểu, và luôn khuyến khích tôi đặt câu hỏi. Đội ngũ quản lý hỗ trợ các tác vụ hành chính, cung cấp các tài liệu cần thiết, và tạo điều kiện thuận lợi để tôi làm việc hiệu quả. Tôi đặc biệt đánh giá cao việc người hướng dẫn cho phép tôi thử và giải quyết các vấn đề mình thay vì chỉ đưa ra câu trả lời.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**3. Mức độ Liên quan của Công việc với Chuyên ngành Học tập**
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+Các nhiệm vụ được giao cho tôi phù hợp tốt với kiến thức tôi học được tại trường, đồng thời cũng giới thiệu tôi về các lĩnh vực mới mà tôi chưa bao giờ gặp trước đây. Điều này cho phép tôi vừa tăng cường kiến thức nền tảng vừa có được kỹ năng thực tế.
 
----
+**4. Cơ hội Học tập & Phát triển Kỹ năng**
 
-### Additional Questions
+Trong thời gian thực tập, tôi đã học được nhiều kỹ năng mới như sử dụng các công cụ quản lý dự án, kỹ năng làm việc nhóm, và giao tiếp chuyên nghiệp trong môi trường doanh nghiệp. Người hướng dẫn cũng chia sẻ những kinh nghiệm thực tế quý giá giúp tôi lên kế hoạch sự nghiệp tốt hơn.
 
-- **What did you find most satisfying during your internship?**  
-  The most satisfying aspect was seeing the direct impact of my work on real AWS projects. I particularly enjoyed collaborating with the team on cloud infrastructure solutions and receiving constructive feedback that helped me grow professionally. The opportunity to work with cutting-edge technologies while contributing meaningful results was incredibly rewarding.
+**5. Văn hóa Công ty & Tinh thần Đội nhóm**
 
-- **What do you think the company should improve for future interns?**  
-  While the overall experience was excellent, I would suggest:
+Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn duy trì vui vẻ. Khi có các dự án khẩn cấp, mọi người làm việc cùng nhau và hỗ trợ lẫn nhau bất kể vị trí của họ. Điều này khiến tôi cảm thấy như một phần thực sự của nhóm, ngay cả khi là một người thực tập.
 
-  - Establishing a more structured onboarding program for new interns
-  - Creating a dedicated internal wiki or knowledge base for quick reference
-  - Scheduling regular feedback sessions (bi-weekly or monthly) to track progress
+**6. Chính sách Thực tập / Lợi ích**
 
-- **If recommending to a friend, would you suggest they intern here? Why or why not?**  
-  Absolutely, I would strongly recommend this internship program to friends. The company provides genuine learning opportunities, supportive mentors, and a collaborative team environment. Unlike some internships where interns are relegated to menial tasks, here you work on meaningful projects and feel valued as a team member. The combination of professional development and positive workplace culture makes this an exceptional internship experience.
+Công ty cung cấp trợ cấp thực tập và cung cấp giờ làm việc linh hoạt khi cần. Ngoài ra, có cơ hội tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
 
 ---
 
-### Suggestions & Expectations
+### Các Câu hỏi Bổ sung
 
-- **Do you have any suggestions to improve the internship experience?**
+- **Điều gì khiến bạn thấy hài lòng nhất trong thời gian thực tập?**
 
-  - Organize monthly technical workshops or knowledge-sharing sessions
-  - Create peer mentoring opportunities between interns and senior staff
-  - Develop a structured career guidance program to help interns plan their professional future
+  Khía cạnh thỏa mãn nhất là thấy tác động trực tiếp của công việc của tôi đối với các dự án AWS thực tế. Tôi đặc biệt thích cộng tác với nhóm trên các giải pháp cơ sở hạ tầng cloud và nhận phản hồi xây dựng giúp tôi phát triển chuyên nghiệp. Cơ hội làm việc với các công nghệ tiên tiến trong khi đóng góp những kết quả có ý nghĩa là rất bổ ích.
 
-- **Would you like to continue this program in the future?**  
-  Yes, I would be very interested in continuing with the FCJ program. If possible, I would like to deepen my expertise in AWS cloud architecture and contribute to more strategic projects.
+- **Bạn nghĩ công ty nên cải thiện điều gì cho các thực tập sinh trong tương lai?**
 
-- **Any other comments (free sharing):**  
-  Overall, this internship has been a transformative experience that exceeded my expectations. I gained not just technical skills but also valuable insights into professional workplace dynamics. I'm grateful for the opportunity and the trust the team placed in me. I look forward to applying what I've learned and potentially contributing to the team's future projects.
+  Mặc dù trải nghiệm tổng thể rất tuyệt vời, tôi muốn đề xuất:
+
+  - Xây dựng một chương trình onboarding có cấu trúc hơn cho các thực tập sinh mới
+  - Tạo một wiki nội bộ chuyên dụng hoặc cơ sở kiến thức để tra cứu nhanh
+  - Lên lịch các buổi phản hồi thường xuyên (hai tuần hoặc hàng tháng) để theo dõi tiến độ
+
+- **Nếu giới thiệu cho một bạn, bạn có muốn họ thực tập ở đây không? Tại sao có hoặc không?**
+
+  Chắc chắn là có, tôi sẽ mạnh mẽ giới thiệu chương trình thực tập này cho các bạn. Công ty cung cấp các cơ hội học tập thực sự, các mentor hỗ trợ, và một môi trường làm việc cộng tác. Không giống như một số thực tập nơi các thực tập sinh bị giao các công việc vặt, tại đây bạn làm việc trên các dự án có ý nghĩa và cảm thấy được đánh giá cao như một thành viên nhóm. Sự kết hợp giữa phát triển chuyên nghiệp và văn hóa nơi làm việc tích cực làm cho đây là một trải nghiệm thực tập ngoại lệ.
+
+---
+
+### Đề xuất & Kỳ vọng
+
+- **Bạn có bất kỳ đề xuất nào để cải thiện trải nghiệm thực tập không?**
+
+  - Tổ chức các buổi workshop kỹ thuật hàng tháng hoặc các phiên chia sẻ kiến thức
+  - Tạo cơ hội mentoring ngang hàng giữa các thực tập sinh và nhân viên cấp cao
+  - Phát triển một chương trình hướng dẫn sự nghiệp có cấu trúc để giúp các thực tập sinh lên kế hoạch tương lai chuyên nghiệp của họ
+
+- **Bạn có muốn tiếp tục chương trình này trong tương lai không?**
+
+  Có, tôi sẽ rất quan tâm đến việc tiếp tục với chương trình FCJ. Nếu có thể, tôi muốn đào sâu chuyên môn của mình trong kiến trúc cloud AWS và đóng góp cho các dự án chiến lược hơn.
+
+- **Bất kỳ bình luận nào khác (chia sẻ tự do):**
+
+  Nhìn chung, thực tập này đã là một trải nghiệm biến đổi vượt quá mong đợi của tôi. Tôi đạt được không chỉ các kỹ năng kỹ thuật mà còn những hiểu biết quý giá về động lực nơi làm việc chuyên nghiệp. Tôi biết ơn cơ hội này và sự tin tưởng mà nhóm đã dành cho tôi. Tôi mong muốn áp dụng những gì tôi đã học được và có thể đóng góp cho các dự án tương lai của nhóm.

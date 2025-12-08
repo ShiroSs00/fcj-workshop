@@ -1,216 +1,217 @@
 ---
-title: "Proposal "
+title: "Đề xuất"
 date: 2025-09-09
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
 
-# Video Sharing Platform
+# Nền tảng Chia sẻ Video
 
-## 1.Executive Summary
+## 1. Tóm tắt Điều hành
 
-This proposal outlines the development of a scalable Video Sharing Platform leveraging AWS cloud services. The platform will enable users to upload, stream, and share video content with features including user authentication, content management, and real-time video streaming.
+Đề xuất này trình bày phát triển một Nền tảng Chia sẻ Video có thể mở rộng tận dụng các dịch vụ AWS cloud. Nền tảng sẽ cho phép người dùng tải lên, phát trực tuyến, và chia sẻ nội dung video với các tính năng bao gồm xác thực người dùng, quản lý nội dung, và phát video trực tuyến trong thời gian thực.
 
-Key objectives:
+Các mục tiêu chính:
 
-- Build a secure, scalable video sharing platform
-- Implement user authentication and authorization
-- Provide high-quality video streaming capabilities
-- Ensure cost-effective infrastructure management
-- Deliver seamless user experience across devices
+- Xây dựng một nền tảng chia sẻ video an toàn, có thể mở rộng
+- Triển khai xác thực và ủy quyền người dùng
+- Cung cấp khả năng phát video chất lượng cao
+- Đảm bảo quản lý cơ sở hạ tầng hiệu quả về chi phí
+- Cung cấp trải nghiệm người dùng liền mạch trên các thiết bị
 
-The solution utilizes AWS services including Amplify for frontend hosting, Cognito for authentication, S3 for storage, CloudFront for content delivery, and Interactive Video Service for streaming capabilities.
+Giải pháp sử dụng các dịch vụ AWS bao gồm Amplify để lưu trữ frontend, Cognito để xác thực, S3 để lưu trữ, CloudFront để phân phối nội dung, và Interactive Video Service để phát trực tuyến.
 
-## 2.Problem Statement
+## 2. Tuyên bố Vấn đề
 
-### What's the Problem?
+### Vấn đề là gì?
 
-Current video sharing solutions face several challenges:
+Các giải pháp chia sẻ video hiện tại gặp phải nhiều thách thức:
 
-- High infrastructure costs for video storage and streaming
-- Complex setup and maintenance requirements
-- Limited scalability during peak usage
-- Security vulnerabilities in user authentication
-- Poor video quality and buffering issues
+- Chi phí cơ sở hạ tầng cao để lưu trữ và phát video
+- Yêu cầu cấu hình và bảo trì phức tạp
+- Khả năng mở rộng hạn chế trong thời gian sử dụng cao điểm
+- Các lỗ hổng bảo mật trong xác thực người dùng
+- Chất lượng video kém và các vấn đề về buffer
 
-### The Solution
+### Giải pháp
 
-Our AWS-based video sharing platform addresses these challenges by:
+Nền tảng chia sẻ video dựa trên AWS của chúng tôi giải quyết các thách thức này bằng cách:
 
-- Leveraging AWS's cost-effective, pay-as-you-use pricing model
-- Utilizing managed services to reduce operational overhead
-- Implementing auto-scaling capabilities for handling traffic spikes
-- Providing enterprise-grade security through AWS Cognito
-- Delivering high-quality video streaming via Amazon IVS and CloudFront
+- Tận dụng mô hình định giá trả-khi-sử-dụng hiệu quả của AWS
+- Sử dụng các dịch vụ quản lý để giảm chi phí hoạt động
+- Triển khai khả năng tự động mở rộng để xử lý các đột biến lưu lượng
+- Cung cấp bảo mật cấp doanh nghiệp thông qua AWS Cognito
+- Cung cấp phát video chất lượng cao qua Amazon IVS và CloudFront
 
-### Benefits and Return on Investment
+### Lợi ích và Lợi nhuận từ Đầu tư
 
-**Cost Savings:**
+**Tiết kiệm Chi phí:**
 
-- 40-60% reduction in infrastructure costs compared to traditional hosting
-- No upfront hardware investments required
-- Pay-per-use model optimizes operational expenses
+- Giảm 40-60% chi phí cơ sở hạ tầng so với hosting truyền thống
+- Không cần đầu tư phần cứng trước
+- Mô hình trả-khi-sử-dụng tối ưu hóa chi phí hoạt động
 
-**Performance Improvements:**
+**Cải thiện Hiệu suất:**
 
-- 99.9% uptime availability
-- Global content delivery with low latency
-- Auto-scaling handles 10x traffic increases seamlessly
+- Tính sẵn sàng thời gian hoạt động 99,9%
+- Phân phối nội dung toàn cầu với độ trễ thấp
+- Tự động mở rộng xử lý tăng lưu lượng 10 lần một cách liền mạch
 
-**Business Value:**
+**Giá trị Kinh doanh:**
 
-- Faster time-to-market (3-6 months vs 12+ months)
-- Enhanced user experience drives higher engagement
-- Scalable architecture supports business growth
+- Thời gian đưa ra thị trường nhanh hơn (3-6 tháng so với 12+ tháng)
+- Trải nghiệm người dùng được cải thiện thúc đẩy mức độ tương tác cao hơn
+- Kiến trúc có thể mở rộng hỗ trợ tăng trưởng kinh doanh
 
-## 3.Solution Architecture
+## 3. Kiến trúc Giải pháp
 
-![Architecture Diagram](https://cuti-duck.github.io/hugo-aws-project/images/architecdiagram.png)
+![Sơ đồ Kiến trúc](https://cuti-duck.github.io/hugo-aws-project/images/architecdiagram.png)
 
-### AWS Services Used
+### Dịch vụ AWS Được sử dụng
 
-**Amplify:** Frontend hosting and deployment platform for React/Vue.js applications with CI/CD integration.
+**Amplify:** Nền tảng lưu trữ frontend và triển khai cho các ứng dụng React/Vue.js với tích hợp CI/CD.
 
-**Cognito:** User authentication and authorization service providing secure sign-up, sign-in, and access control.
+**Cognito:** Dịch vụ xác thực và ủy quyền người dùng cung cấp đăng ký, đăng nhập và kiểm soát truy cập an toàn.
 
-**App Runner:** Containerized backend API hosting with automatic scaling and load balancing.
+**App Runner:** Lưu trữ API backend được container hóa với tự động mở rộng và cân bằng tải.
 
-**DynamoDB:** NoSQL database for storing user profiles, video metadata, and application data.
+**DynamoDB:** Cơ sở dữ liệu NoSQL để lưu trữ hồ sơ người dùng, siêu dữ liệu video, và dữ liệu ứng dụng.
 
-**S3:** Object storage for video files, thumbnails, and static assets with versioning and lifecycle policies.
+**S3:** Lưu trữ đối tượng cho các tệp video, hình nhỏ, và tài sản tĩnh với versioning và lifecycle policies.
 
-**CloudFront:** Global CDN for fast content delivery and video streaming with edge caching.
-**Amazon IVS (Interactive Video Service):** Real-time video streaming service for live broadcasts and on-demand content with low latency.
+**CloudFront:** CDN toàn cầu để phân phối nội dung nhanh và phát video với edge caching.
 
-**Code Pipeline:** CI/CD pipeline for automated testing, building, and deployment.
+**Amazon IVS (Interactive Video Service):** Dịch vụ phát video trực tuyến cho các buổi phát sóng trực tiếp và nội dung theo yêu cầu với độ trễ thấp.
 
-**Code Build:** Build service for compiling source code, running tests, and creating deployment packages.
+**Code Pipeline:** Pipeline CI/CD để kiểm tra, xây dựng, và triển khai tự động.
 
-**Elastic Container Registry:** Docker container registry for storing and managing application images.
+**Code Build:** Dịch vụ xây dựng để biên dịch mã nguồn, chạy các bài kiểm tra, và tạo các gói triển khai.
 
-### Component Design
+**Elastic Container Registry:** Đăng ký container Docker để lưu trữ và quản lý hình ảnh ứng dụng.
 
-**Frontend Layer:**
+### Thiết kế Thành phần
 
-- React-based web application hosted on Amplify
-- Responsive design supporting mobile and desktop
-- Real-time video player with adaptive bitrate streaming
+**Lớp Frontend:**
 
-**API Layer:**
+- Ứng dụng web dựa trên React được lưu trữ trên Amplify
+- Thiết kế đáp ứng hỗ trợ di động và máy tính để bàn
+- Trình phát video thời gian thực với streaming bitrate thích ứng
 
-- RESTful APIs built with Node.js/Express
-- Containerized and deployed on App Runner
-- JWT-based authentication integration
+**Lớp API:**
 
-**Data Layer:**
+- API RESTful được xây dựng với Node.js/Express
+- Được container hóa và triển khai trên App Runner
+- Tích hợp xác thực dựa trên JWT
 
-- DynamoDB tables for user data and video metadata
-- S3 buckets for video storage with intelligent tiering
+**Lớp Dữ liệu:**
 
-**Security Layer:**
+- Bảng DynamoDB cho dữ liệu người dùng và siêu dữ liệu video
+- S3 buckets để lưu trữ video với phân tầng thông minh
 
-- Cognito user pools for authentication
-- IAM roles and policies for access control
+**Lớp Bảo mật:**
 
-**Streaming Architecture:**
+- Nhóm người dùng Cognito để xác thực
+- IAM roles và policies để kiểm soát truy cập
 
-- Amazon IVS for live streaming capabilities
-- CloudFront for global video distribution
-- Adaptive bitrate streaming for optimal quality
+**Kiến trúc Phát trực tuyến:**
 
-### Use Cases
+- Amazon IVS cho khả năng phát trực tuyến
+- CloudFront để phân phối video toàn cầu
+- Streaming bitrate thích ứng để tối ưu hóa chất lượng
 
-**Live Streaming Events:**
+### Các trường hợp sử dụng
 
-- Real-time broadcasting of conferences, webinars, and corporate events
-- Multi-bitrate streaming for optimal viewer experience
+**Sự kiện Phát trực tuyến:**
 
-**Video On Demand (VOD):**
+- Phát sóng thời gian thực của các hội nghị, webinars, và sự kiện công ty
+- Phát trực tuyến đa bitrate cho trải nghiệm xem tối ưu
 
-- Upload and share educational content, tutorials, and training materials
-- Secure content access with user permissions
+**Video theo yêu cầu (VOD):**
 
-**Social Video Sharing:**
+- Tải lên và chia sẻ nội dung giáo dục, hướng dẫn, và tài liệu đào tạo
+- Truy cập nội dung an toàn với quyền người dùng
 
-- User-generated content sharing
-- Community features with comments and ratings
+**Chia sẻ Video Xã hội:**
 
-## 4.Technical Implementation
+- Chia sẻ nội dung do người dùng tạo
+- Các tính năng cộng đồng với bình luận và xếp hạng
 
-### Phase 1: Infrastructure Setup
+## 4. Triển khai Kỹ thuật
 
-**AWS Account Configuration:**
+### Giai đoạn 1: Thiết lập Cơ sở hạ tầng
 
-- Configure IAM roles and policies for least privilege access
+**Cấu hình Tài khoản AWS:**
 
-**Core Services Deployment:**
+- Cấu hình IAM roles và policies cho truy cập ít nhất đặc quyền
 
-- Deploy DynamoDB tables with proper indexing
-- Configure S3 buckets with encryption and lifecycle policies
-- Set up Cognito user pools and identity pools
+**Triển khai Dịch vụ Cốt lõi:**
 
-### Phase 2: Backend Development
+- Triển khai bảng DynamoDB với indexing phù hợp
+- Cấu hình S3 buckets với encryption và lifecycle policies
+- Thiết lập nhóm người dùng Cognito và nhóm nhận dạng
 
-**API Development:**
+### Giai đoạn 2: Phát triển Backend
 
-- Build RESTful APIs using Node.js/Express framework
-- Implement JWT authentication with Cognito integration
-- Create video upload/processing endpoints
-- Develop user management and content APIs
+**Phát triển API:**
 
-**Database Schema:**
+- Xây dựng API RESTful sử dụng framework Node.js/Express
+- Triển khai xác thực JWT với tích hợp Cognito
+- Tạo các endpoints tải lên/xử lý video
+- Phát triển API quản lý người dùng và nội dung
 
-- Users table: user_id, email, profile_data, created_at
-- Videos table: video_id, user_id, metadata, upload_status
-- Analytics table: event_id, user_id, video_id, timestamp, action
+**Lược đồ Cơ sở dữ liệu:**
 
-**Containerization:**
+- Bảng Users: user_id, email, profile_data, created_at
+- Bảng Videos: video_id, user_id, metadata, upload_status
+- Bảng Analytics: event_id, user_id, video_id, timestamp, action
 
-- Create Docker containers for API services
-- Push images to Elastic Container Registry
-- Configure App Runner for automatic deployment
+**Container hóa:**
 
-### Phase 3: Frontend Development
+- Tạo Docker containers cho các dịch vụ API
+- Đẩy hình ảnh lên Elastic Container Registry
+- Cấu hình App Runner để triển khai tự động
 
-**React Application:**
+### Giai đoạn 3: Phát triển Frontend
 
-- Implement responsive UI components
-- Integrate AWS Amplify SDK for authentication
-- Build video upload interface with progress tracking
-- Create video player with adaptive streaming
+**Ứng dụng React:**
 
-**Key Features:**
+- Triển khai các thành phần UI đáp ứng
+- Tích hợp AWS Amplify SDK để xác thực
+- Xây dựng giao diện tải lên video với theo dõi tiến trình
+- Tạo trình phát video với streaming thích ứng
 
-- User registration/login with email verification
-- Video upload with drag-and-drop functionality
-- Real-time video streaming with quality selection
-- User dashboard for content management
+**Các tính năng chính:**
 
-### Phase 4: Streaming Integration
+- Đăng ký/đăng nhập người dùng với xác minh email
+- Tải lên video với chức năng kéo và thả
+- Phát video trực tuyến thời gian thực với lựa chọn chất lượng
+- Bảng điều khiển người dùng để quản lý nội dung
 
-**Amazon IVS Setup:**
+### Giai đoạn 4: Tích hợp Phát trực tuyến
 
-- Configure streaming channels and playback URLs
-- Implement adaptive bitrate streaming
-- Set up recording and archival workflows
+**Thiết lập Amazon IVS:**
 
-**CloudFront Configuration:**
+- Cấu hình các kênh phát trực tuyến và URL phát lại
+- Triển khai streaming bitrate thích ứng
+- Thiết lập các quy trình ghi âm và lưu trữ
 
-- Create distributions for video content delivery
-- Configure edge locations for global reach
-- Implement caching strategies for optimal performance
+**Cấu hình CloudFront:**
 
-### Phase 5: CI/CD Pipeline
+- Tạo các phân phối cho phân phối nội dung video
+- Cấu hình các vị trí edge để tiếp cận toàn cầu
+- Triển khai các chiến lược caching để tối ưu hóa hiệu suất
 
-**Automated Deployment:**
+### Giai đoạn 5: Pipeline CI/CD
 
-- Configure CodePipeline for source-to-production workflow
-- Set up CodeBuild for automated testing and building
-- Implement blue-green deployment strategy
+**Triển khai Tự động:**
 
-**Testing Strategy:**
+- Cấu hình CodePipeline cho quy trình từ nguồn đến sản xuất
+- Thiết lập CodeBuild để kiểm tra và xây dựng tự động
+- Triển khai chiến lược triển khai blue-green
 
-- Unit tests for API endpoints
-- Integration tests for AWS service interactions
-- Load testing for performance validation
+**Chiến lược Kiểm thử:**
+
+- Kiểm tra đơn vị cho các endpoints API
+- Kiểm tra tích hợp cho các tương tác dịch vụ AWS
+- Kiểm tra tải cho xác thực hiệu suất

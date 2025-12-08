@@ -1,59 +1,49 @@
 ---
-title: "Worklog Tuần 3"
+title: "Nhật ký công việc - Tuần 3"
 date: "`r Sys.Date()`"
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 3:
 
-### Mục tiêu tuần 3:
+- Tìm hiểu về S3 (Simple Storage Service) để lưu trữ objects.
+- Hiểu về DynamoDB (cơ sở dữ liệu NoSQL) và các khái niệm cốt lõi.
+- Thực hành các hoạt động S3 và DynamoDB.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các nhiệm vụ cần thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày | Nhiệm vụ                                                                                    | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo                        |
+| ---- | ------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 1    | Tìm hiểu nền tảng S3: buckets, objects, storage classes, versioning, lifecycle policies     | 09/22/2025   | 09/22/2025      | <https://docs.aws.amazon.com/s3/>         |
+| 2    | Thực hành S3: Tạo bucket, upload objects, kích hoạt versioning, cấu hình lifecycle policies | 09/23/2025   | 09/23/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3    | Tìm hiểu bảo mật S3: bucket policies, ACLs, pre-signed URLs, encryption                     | 09/24/2025   | 09/24/2025      | <https://000057.awsstudygroup.com/>       |
+| 4    | Tìm hiểu nền tảng DynamoDB: tables, items, partition key, sort key, capacity modes          | 09/25/2025   | 09/25/2025      | <https://docs.aws.amazon.com/dynamodb/>   |
+| 5    | Thực hành DynamoDB: Tạo table, insert items, query và scan operations, auto-scaling         | 09/26/2025   | 09/26/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6    | Thực hành DynamoDB (tiếp theo): Update items, delete items, cấu hình indexes, TTL settings  | 09/27/2025   | 09/27/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+### Thành tựu Tuần 3:
 
-### Kết quả đạt được tuần 3:
+Thành công tìm hiểu và thực hành nền tảng S3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Tạo S3 buckets và upload/download objects
+- Kích hoạt versioning để bảo vệ dữ liệu
+- Cấu hình lifecycle policies để tối ưu hóa chi phí
+- Triển khai bảo mật S3 với bucket policies và ACLs
+- Tạo pre-signed URLs để cấp quyền truy cập tạm thời
+- Kích hoạt server-side encryption cho dữ liệu nhạy cảm
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Thành công tìm hiểu và thực hành nền tảng DynamoDB:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- Tạo DynamoDB tables với partition keys và sort keys
+- Insert, update, và delete items
+- Thực hiện Query và Scan operations với filters
+- Cấu hình provisioned capacity và auto-scaling
+- Tạo Global Secondary Indexes để truy vấn linh hoạt
+- Thiết lập TTL để hết hạn items tự động
+- Giám sát table metrics sử dụng CloudWatch
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+Đạt được kỹ năng quản lý lưu trữ objects và cơ sở dữ liệu NoSQL cho các ứng dụng sản xuất.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+Tích hợp kiến thức S3 và DynamoDB với các dịch vụ AWS trước đó (EC2, IAM, VPC) để có hiểu biết toàn diện về cơ sở hạ tầng.
