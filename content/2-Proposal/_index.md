@@ -1,5 +1,5 @@
 ---
-title: "Proposal"
+title: "Proposal "
 date: 2025-09-09
 weight: 2
 chapter: false
@@ -66,7 +66,7 @@ Our AWS-based video sharing platform addresses these challenges by:
 
 ## 3.Solution Architecture
 
-![Architecture Diagram](https://cuti-duck.github.io/hugo-aws-project/images/architecdiagram.png)
+![Architecture Diagram](/video-sharing-platform.png)
 
 ### AWS Services Used
 
@@ -81,7 +81,12 @@ Our AWS-based video sharing platform addresses these challenges by:
 **S3:** Object storage for video files, thumbnails, and static assets with versioning and lifecycle policies.
 
 **CloudFront:** Global CDN for fast content delivery and video streaming with edge caching.
+
 **Amazon IVS (Interactive Video Service):** Real-time video streaming service for live broadcasts and on-demand content with low latency.
+
+**AWS Elemental MediaConvert:** Used to turn original video into many formats, many resolutions, many codecs, for streaming or downloading.
+
+**AWS Lambda:** Serverless compute service for event-driven processing, video transcoding triggers, and backend automation tasks.
 
 **Code Pipeline:** CI/CD pipeline for automated testing, building, and deployment.
 
@@ -99,8 +104,9 @@ Our AWS-based video sharing platform addresses these challenges by:
 
 **API Layer:**
 
-- RESTful APIs built with Node.js/Express
+- RESTful APIs built with .NET
 - Containerized and deployed on App Runner
+- AWS Lambda for serverless API endpoints
 - JWT-based authentication integration
 
 **Data Layer:**
@@ -112,6 +118,13 @@ Our AWS-based video sharing platform addresses these challenges by:
 
 - Cognito user pools for authentication
 - IAM roles and policies for access control
+
+**Video Processing Layer:**
+
+- AWS Lambda functions triggered by S3 events
+- AWS Elemental MediaConvert for transcoding videos
+- Automated conversion to multiple formats and resolutions
+- HLS and DASH output for adaptive streaming
 
 **Streaming Architecture:**
 
@@ -157,13 +170,20 @@ Our AWS-based video sharing platform addresses these challenges by:
 - Build RESTful APIs using Node.js/Express framework
 - Implement JWT authentication with Cognito integration
 - Create video upload/processing endpoints
+- Develop Lambda functions for event-driven tasks
 - Develop user management and content APIs
 
 **Database Schema:**
 
-- Users table: user_id, email, profile_data, created_at
-- Videos table: video_id, user_id, metadata, upload_status
-- Analytics table: event_id, user_id, video_id, timestamp, action
+- Users table: userId, avatarUrl, birthDate, channelId, createdAt, email, gender, name, phoneNumber
+- Videos table: videoId, channelId, commentCount, createdAt, createdFromStreamId, description, duration, key, likeCount, playbackUrl, status, thumbnailUrl, title, type, updatedAt, userId, viewCount
+- VideoLikes table: userId, videoId, createdAt
+- Subscriptions table: userId, channelId, createdAt
+- StreamSessions table: streamId, channelId, createdAt, description, endedAt, isLive, recordingUrl, startedAt, status, thumbnailUrl, title, updatedAt, userId, viewerCount
+- Notifications table: recipientUserId, createdAt, actorAvatarUrl, actorName, actorUserId
+- Comments table: videoId, commentId, content, createdAt, isDeleted, isEdited, likeCount, parentCommentId, replyCount, updatedAt, userAvatarUrl, userId, userName
+- CommentLikes table: commentId, userId, createdAt
+- Channels table: channelId, avatarUrl, channelArn, createdAt, currentStreamId, description, ingestEndpoint, isLive, name, playbackUrl, streamKeyArn, subscriberCount, userId, videoCount
 
 **Containerization:**
 
@@ -188,6 +208,15 @@ Our AWS-based video sharing platform addresses these challenges by:
 - User dashboard for content management
 
 ### Phase 4: Streaming Integration
+
+**AWS Lambda & MediaConvert Setup:**
+
+- Create Lambda functions for S3 event handling
+- Implement video processing workflow automation
+- Configure MediaConvert job templates for transcoding
+- Set up output presets (1080p, 720p, 480p)
+- Generate HLS/DASH manifests for adaptive streaming
+- Update DynamoDB with processing status
 
 **Amazon IVS Setup:**
 
@@ -214,3 +243,216 @@ Our AWS-based video sharing platform addresses these challenges by:
 - Unit tests for API endpoints
 - Integration tests for AWS service interactions
 - Load testing for performance validation
+
+## 5.Timeline & Milestones
+
+### Project Duration: 8 Weeks (2 Months)
+
+**Week 1: Setup & Planning**
+
+- AWS account setup and IAM configuration
+- Project requirements finalization
+- Team roles assignment
+- Basic infrastructure deployment (S3, DynamoDB, Cognito)
+
+**Week 2-3: Backend Development**
+
+- RESTful APIs with .NET
+- JWT authentication with Cognito
+- Video upload endpoints
+- Database schemas implementation
+- App Runner deployment
+
+**Week 4-5: Frontend Development**
+
+- React application with responsive design
+- User authentication flows
+- Video upload interface
+- Basic video player
+- Amplify deployment
+
+**Week 6: Integration & Streaming**
+
+- Frontend-backend integration
+- Lambda functions for video processing automation
+- MediaConvert setup for video transcoding
+- CloudFront setup for video delivery
+- Basic streaming functionality
+- Testing and bug fixes
+
+**Week 7-8: Final Deployment**
+
+- Production deployment
+- User acceptance testing
+- Documentation completion
+- Project presentation preparation
+
+### Key Milestones
+
+**Milestone 1 (Week 1):** Infrastructure Ready
+
+- AWS services configured
+- Development environment accessible
+
+**Milestone 2 (Week 3):** Backend Complete
+
+- APIs functional
+- Authentication working
+
+**Milestone 3 (Week 5):** Frontend Complete
+
+- UI fully developed
+- Basic video upload/playback working
+
+**Milestone 4 (Week 8):** Production Launch
+
+- System deployed and tested
+- Documentation complete
+
+## 6.Budget Estimation
+
+### Monthly Operating Costs (USD)
+
+**Compute Services:**
+
+- App Runner (1 services): $5-15/month
+- AWS Lambda: $0-2/month
+- Amplify Hosting: $0-5/month
+
+**Storage & Database:**
+
+- S3 Storage: $0-1/month
+- DynamoDB: $0-2/month
+- CloudFront Data Transfer: $0-2/month
+
+**Streaming Services:**
+
+- Amazon IVS (100 hours/month): $150-300/month
+- AWS Elemental MediaConvert: $20-50/month
+
+**Security & Monitoring:**
+
+- Cognito: $0/month
+
+**CI/CD**
+
+- CodePipeline & CodeBuild: $1-3/month
+- ERC: $0-1/month
+- [Calculator](https://calculator.aws/#/estimate?id=89df8e5261796a621e5cafe03560859b27336a22)
+
+  **Total Monthly Cost: $17-44/month**
+
+## 7.Risks Assessment
+
+### Primary Risks
+
+**Technical Risks:**
+
+- Integration complexity → Start simple, gradually increase
+- Time management → Build buffer time, prioritize core features
+
+**Resource Risks:**
+
+- Exceeding AWS Free Tier → Monitor usage, set up alerts
+
+### Mitigation Solutions
+
+**Technical Management:**
+
+- CloudFormation templates
+- Phase-by-phase testing
+- Dev/staging environments
+
+**Contingency Plans:**
+
+- **MVP:** Basic video upload/playback
+- **Core:** User auth + streaming
+- **Advanced:** Live streaming (optional)
+- Use AWS Educate credits
+- Mock services for demos
+
+## 8.Expected Outcomes
+
+### Performance Metrics
+
+**System Performance:**
+
+- Video upload success rate: >95%
+- Streaming latency: <3 seconds
+- System uptime: >99%
+- Concurrent users: 100+
+- Page load times: <2 seconds
+
+### Success Criteria
+
+**MVP Requirements:**
+
+- User registration/login
+- Basic video upload/playback
+- Secure authentication
+- Responsive interface
+- System monitoring
+
+**Stretch Goals:**
+
+- Live streaming capabilities
+- Advanced analytics
+- Social features
+- Mobile companion appld buffer time, prioritize core features
+
+**Resource Risks:**
+
+- Exceeding AWS Free Tier → Monitor usage, set up alerts
+
+### Mitigation Solutions
+
+**Technical Management:**
+
+- CloudFormation templates
+- Phase-by-phase testing
+- Dev/staging environments
+
+**Contingency Plans:**
+
+- **MVP:** Basic video upload/playback
+- **Core:** User auth + streaming
+- **Advanced:** Live streaming (optional)
+- Use AWS Educate credits
+- Mock services for demos
+
+## 8.Expected Outcomes
+
+### Performance Metrics
+
+**System Performance:**
+
+- Video upload success rate: >95%
+- Streaming latency: <3 seconds
+- System uptime: >99%
+- Concurrent users: 100+
+- Page load times: <2 seconds
+
+### Success Criteria
+
+**MVP Requirements:**
+
+- User registration/login
+- Basic video upload/playback
+- Secure authentication
+- Responsive interface
+- System monitoring
+
+**Stretch Goals:**
+
+- Live streaming capabilities
+- Advanced analytics
+- Social features
+- Mobile companion app
+
+### Attachments / References
+
+- [Document](https://docs.google.com/document/d/1mFfQa_uaCAm5v0vkNDjvgzCpmMjl6qLx/edit)
+
+- [Video](https://www.youtube.com/watch?v=b-yUXvy9HMY)
+
+- [Slide](https://www.canva.com/design/DAG65vZ0WMw/_fH1tj8I_9JLBne3YUD-wQ/edit)
