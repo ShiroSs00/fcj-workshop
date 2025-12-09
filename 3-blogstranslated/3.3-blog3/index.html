@@ -1,0 +1,279 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.134.3"><meta name=description content><meta name=author content="thienlh@thienlu.com"><link rel=icon href=/fcj-workshop/images/favicon.png type=image/png><title>Blog 3 :: Internship Report</title>
+<link href=/fcj-workshop/css/nucleus.css?1765299868 rel=stylesheet><link href=/fcj-workshop/css/fontawesome-all.min.css?1765299868 rel=stylesheet><link href=/fcj-workshop/css/hybrid.css?1765299868 rel=stylesheet><link href=/fcj-workshop/css/featherlight.min.css?1765299868 rel=stylesheet><link href=/fcj-workshop/css/perfect-scrollbar.min.css?1765299868 rel=stylesheet><link href=/fcj-workshop/css/auto-complete.css?1765299868 rel=stylesheet><link href=/fcj-workshop/css/atom-one-dark-reasonable.css?1765299868 rel=stylesheet><link href=/fcj-workshop/css/theme.css?1765299868 rel=stylesheet><link href=/fcj-workshop/css/hugo-theme.css?1765299868 rel=stylesheet><link href=/fcj-workshop/css/theme-workshop.css?1765299868 rel=stylesheet><script src=/fcj-workshop/js/jquery-3.3.1.min.js?1765299868></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/fcj-workshop/3-blogstranslated/3.3-blog3/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=/><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff}.cls-2{fill:#f90;fill-rule:evenodd}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09 10.85a4.7 4.7.0 00.19 1.48 7.73 7.73.0 00.54 1.19.77.77.0 01.12.38.64.64.0 01-.32.49l-1 .7a.83.83.0 01-.44.15.69.69.0 01-.49-.23 3.8 3.8.0 01-.6-.77q-.25-.42-.51-1a6.14 6.14.0 01-4.89 2.3 4.54 4.54.0 01-3.32-1.19 4.27 4.27.0 01-1.22-3.2 4.28 4.28.0 011.46-3.4A6.06 6.06.0 017.69 6.46a12.47 12.47.0 011.76.13q.92.13 1.91.36V5.73a3.65 3.65.0 00-.79-2.66A3.81 3.81.0 007.86 2.3a7.71 7.71.0 00-1.79.22 12.78 12.78.0 00-1.79.57 4.55 4.55.0 01-.58.22h-.26q-.35.0-.35-.52V2a1.09 1.09.0 01.12-.58 1.2 1.2.0 01.47-.35A10.88 10.88.0 015.77.32 10.19 10.19.0 018.36.0a6 6 0 014.35 1.35 5.49 5.49.0 011.38 4.09zM7.34 13.38a5.36 5.36.0 001.72-.31A3.63 3.63.0 0010.63 12 2.62 2.62.0 0011.19 11a5.63 5.63.0 00.16-1.44v-.7a14.35 14.35.0 00-1.53-.28 12.37 12.37.0 00-1.56-.1 3.84 3.84.0 00-2.47.67A2.34 2.34.0 005 11a2.35 2.35.0 00.61 1.76A2.4 2.4.0 007.34 13.38zm13.35 1.8a1 1 0 01-.64-.16 1.3 1.3.0 01-.35-.65L15.81 1.51a3 3 0 01-.15-.67.36.36.0 01.41-.41H17.7a1 1 0 01.65.16 1.4 1.4.0 01.33.65l2.79 11 2.59-11A1.17 1.17.0 0124.39.6a1.1 1.1.0 01.67-.16H26.4a1.1 1.1.0 01.67.16 1.17 1.17.0 01.32.65L30 12.39 32.88 1.25A1.39 1.39.0 0133.22.6a1 1 0 01.65-.16h1.54a.36.36.0 01.41.41 1.36 1.36.0 010 .26 3.64 3.64.0 01-.12.41l-4 12.86a1.3 1.3.0 01-.35.65 1 1 0 01-.64.16H29.25a1 1 0 01-.67-.17 1.26 1.26.0 01-.32-.67L25.67 3.64l-2.56 10.7a1.26 1.26.0 01-.32.67 1 1 0 01-.67.17zm21.36.44a11.28 11.28.0 01-2.56-.29 7.44 7.44.0 01-1.92-.67 1 1 0 01-.61-.93v-.84q0-.52.38-.52a.9.9.0 01.31.06l.42.17a8.77 8.77.0 001.83.58 9.78 9.78.0 002 .2 4.48 4.48.0 002.43-.55 1.76 1.76.0 00.86-1.57 1.61 1.61.0 00-.45-1.16A4.29 4.29.0 0043 9.22l-2.41-.76A5.15 5.15.0 0138 6.78a3.94 3.94.0 01-.83-2.41 3.7 3.7.0 01.45-1.85 4.47 4.47.0 011.19-1.37 5.27 5.27.0 011.7-.86A7.4 7.4.0 0142.6.0a8.87 8.87.0 011.12.07q.57.07 1.08.19t.95.26a4.27 4.27.0 01.7.29 1.59 1.59.0 01.49.41.94.94.0 01.15.55v.79q0 .52-.38.52a1.76 1.76.0 01-.64-.2 7.74 7.74.0 00-3.2-.64 4.37 4.37.0 00-2.21.47 1.6 1.6.0 00-.79 1.48 1.58 1.58.0 00.49 1.18 4.94 4.94.0 001.83.92L44.55 7a5.08 5.08.0 012.57 1.6A3.76 3.76.0 0147.9 11a4.21 4.21.0 01-.44 1.93 4.4 4.4.0 01-1.21 1.47 5.43 5.43.0 01-1.85.93A8.25 8.25.0 0142.05 15.62z"/><path class="cls-2" d="M45.19 23.81C39.72 27.85 31.78 30 25 30A36.64 36.64.0 01.22 20.57c-.51-.46-.06-1.09.56-.74A49.78 49.78.0 0025.53 26.4 49.23 49.23.0 0044.4 22.53C45.32 22.14 46.1 23.14 45.19 23.81z"/><path class="cls-2" d="M47.47 21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74 3.13-2.2 8.27-1.57 8.86-.83s-.16 5.89-3.09 8.35c-.45.38-.88.18-.68-.32C46.69 25.8 48.17 22.11 47.47 21.21z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/fcj-workshop/js/lunr.min.js?1765299868></script><script type=text/javascript src=/fcj-workshop/js/auto-complete.js?1765299868></script><script type=text/javascript>var baseurl="https://ShiroSs00.github.io/fcj-workshop/"</script><script type=text/javascript src=/fcj-workshop/js/search.js?1765299868></script></div><div class=highlightable><ul class=topics><li data-nav-id=/fcj-workshop/1-worklog/ title=Worklog class=dd-item><a href=/fcj-workshop/1-worklog/><b>1. </b>Worklog
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/fcj-workshop/1-worklog/1.1-week1/ title="Week 1 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.1-week1/><b>1.1. </b>Week 1 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.2-week2/ title="Week 2 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.2-week2/><b>1.2. </b>Week 2 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.3-week3/ title="Week 3 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.3-week3/><b>1.3. </b>Week 3 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.4-week4/ title="Week 4 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.4-week4/><b>1.4. </b>Week 4 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.5-week5/ title="Week 5 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.5-week5/><b>1.5. </b>Week 5 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.6-week6/ title="Week 6 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.6-week6/><b>1.6. </b>Week 6 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.7-week7/ title="Week 7 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.7-week7/><b>1.7. </b>Week 7 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.8-week8/ title="Week 8 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.8-week8/><b>1.8. </b>Week 8 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.9-week9/ title="Week 9 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.9-week9/><b>1.9. </b>Week 9 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.10-week10/ title="Week 10 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.10-week10/><b>1.10. </b>Week 10 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.11-week11/ title="Week 11 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.11-week11/><b>1.11. </b>Week 11 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/1-worklog/1.12-week12/ title="Week 12 Worklog" class=dd-item><a href=/fcj-workshop/1-worklog/1.12-week12/><b>1.12. </b>Week 12 Worklog
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/fcj-workshop/2-proposal/ title="Proposal " class=dd-item><a href=/fcj-workshop/2-proposal/><b>2. </b>Proposal
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/3-blogstranslated/ title="Translated Blogs" class="dd-item
+parent"><a href=/fcj-workshop/3-blogstranslated/><b>3. </b>Translated Blogs
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/fcj-workshop/3-blogstranslated/3.1-blog1/ title="Blog 1" class=dd-item><a href=/fcj-workshop/3-blogstranslated/3.1-blog1/><b>3.1. </b>Blog 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/3-blogstranslated/3.2-blog2/ title="Blog 2" class=dd-item><a href=/fcj-workshop/3-blogstranslated/3.2-blog2/><b>3.2. </b>Blog 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/3-blogstranslated/3.3-blog3/ title="Blog 3" class="dd-item
+active"><a href=/fcj-workshop/3-blogstranslated/3.3-blog3/><b>3.3. </b>Blog 3
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/fcj-workshop/4-eventparticipated/ title="Events Participated" class=dd-item><a href=/fcj-workshop/4-eventparticipated/><b>4. </b>Events Participated
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/fcj-workshop/4-eventparticipated/4.1-event1/ title="Event 1" class=dd-item><a href=/fcj-workshop/4-eventparticipated/4.1-event1/><b>4.1. </b>Event 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/4-eventparticipated/4.2-event2/ title="Event 2" class=dd-item><a href=/fcj-workshop/4-eventparticipated/4.2-event2/><b>4.2. </b>Event 2
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/fcj-workshop/5-workshop/ title=Workshop class=dd-item><a href=/fcj-workshop/5-workshop/><b>5. </b>Workshop
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/fcj-workshop/5-workshop/5.1-introduction/ title=Introduction class=dd-item><a href=/fcj-workshop/5-workshop/5.1-introduction/><b>5.1 </b>Introduction
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/5-workshop/5.2-preparation/ title=Preparation class=dd-item><a href=/fcj-workshop/5-workshop/5.2-preparation/><b>5.2 </b>Preparation
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/5-workshop/5.3-createrepository/ title="Create Repository" class=dd-item><a href=/fcj-workshop/5-workshop/5.3-createrepository/><b>5.3 </b>Create Repository
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/5-workshop/5.4-createcodebuild/ title="Create Code Build" class=dd-item><a href=/fcj-workshop/5-workshop/5.4-createcodebuild/><b>5.4 </b>Create Code Build
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/5-workshop/5.5-createcodepipeline/ title="Create Code PipeLine" class=dd-item><a href=/fcj-workshop/5-workshop/5.5-createcodepipeline/><b>5.5 </b>Create Code PipeLine
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/5-workshop/5.6-testresult/ title="Test Result" class=dd-item><a href=/fcj-workshop/5-workshop/5.6-testresult/><b>5.6 </b>Test Result
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/fcj-workshop/6-self-evaluation/ title=Self-Assessment class=dd-item><a href=/fcj-workshop/6-self-evaluation/><b>6. </b>Self-Assessment
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/fcj-workshop/7-feedback/ title="Sharing and Feedback" class=dd-item><a href=/fcj-workshop/7-feedback/><b>7. </b>Sharing and Feedback
+<i class="fas fa-check read-icon"></i></a></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://www.facebook.com/groups/awsstudygroupfcj/><i class='fab fa-facebook'></i> AWS Study Group</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value"><option id=en value=https://ShiroSs00.github.io/fcj-workshop/3-blogstranslated/3.3-blog3/ selected>English</option><option id=vi value=https://ShiroSs00.github.io/fcj-workshop/vi/3-blogstranslated/3.3-blog3/>Tiếng Việt</option></select><svg id="Capa_1" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><left><b>Workshop</b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title=Migrate alt="web counter" border=0></a><br><b><a href=https://cloudjourney.awsstudygroup.com/>Cloud Journey</a></b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" alt="web counter" border=0>
+</left><left><br><br><b>Last Updated</b><br><i><span id=lastUpdated style=color:orange></span>
+</i><script>const today=new Date,formattedDate=today.toLocaleDateString("en-GB");document.getElementById("lastUpdated").textContent=formattedDate</script></left><left><br><br><b>Team</b><br><i><a href=https://www.facebook.com/groups/660548818043427 style=color:orange>First Cloud Journey</a><br></i></left><script async defer src=https://buttons.github.io/buttons.js></script></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i>
+</a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=/fcj-workshop/>Internship Report</a> > <a href=/fcj-workshop/3-blogstranslated/>Translated Blogs</a> > Blog 3</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#understanding-aws-elemental-mediaconvert>Understanding AWS Elemental MediaConvert</a></li><li><a href=#the-challenge-static-vs-dynamic-configuration>The Challenge: Static vs. Dynamic Configuration</a><ul><li><a href=#traditional-static-configuration>Traditional Static Configuration</a></li><li><a href=#dynamic-configuration-approach>Dynamic Configuration Approach</a></li></ul></li><li><a href=#architecture-for-dynamic-mediaconvert-configuration>Architecture for Dynamic MediaConvert Configuration</a><ul><li><a href=#high-level-workflow>High-Level Workflow</a></li><li><a href=#components>Components</a></li></ul></li><li><a href=#implementation-strategies>Implementation Strategies</a><ul><li><a href=#strategy-1-resolution-based-configuration>Strategy 1: Resolution-Based Configuration</a></li><li><a href=#strategy-2-frame-rate-normalization>Strategy 2: Frame Rate Normalization</a></li><li><a href=#strategy-3-content-type-based-configuration>Strategy 3: Content-Type-Based Configuration</a></li><li><a href=#strategy-4-multi-platform-output-configuration>Strategy 4: Multi-Platform Output Configuration</a></li></ul></li><li><a href=#building-the-decision-engine-with-aws-step-functions>Building the Decision Engine with AWS Step Functions</a><ul><li><a href=#workflow-definition>Workflow Definition</a></li><li><a href=#analysis-lambda-function>Analysis Lambda Function</a></li></ul></li><li><a href=#real-world-use-cases>Real-World Use Cases</a><ul><li><a href=#use-case-1-video-content-platform>Use Case 1: Video Content Platform</a></li><li><a href=#use-case-2-news-and-media-organization>Use Case 2: News and Media Organization</a></li><li><a href=#use-case-3-live-event-archival>Use Case 3: Live Event Archival</a></li></ul></li><li><a href=#best-practices-for-dynamic-configuration>Best Practices for Dynamic Configuration</a><ul><li><a href=#1-metadata-extraction>1. Metadata Extraction</a></li><li><a href=#2-business-rules-engine>2. Business Rules Engine</a></li><li><a href=#3-job-configuration>3. Job Configuration</a></li><li><a href=#4-error-handling>4. Error Handling</a></li><li><a href=#5-monitoring-and-optimization>5. Monitoring and Optimization</a></li><li><a href=#6-cost-optimization>6. Cost Optimization</a></li></ul></li><li><a href=#aws-services-integration>AWS Services Integration</a></li><li><a href=#performance-considerations>Performance Considerations</a><ul><li><a href=#processing-efficiency>Processing Efficiency</a></li><li><a href=#cost-optimization>Cost Optimization</a></li></ul></li><li><a href=#troubleshooting-and-monitoring>Troubleshooting and Monitoring</a><ul><li><a href=#common-issues>Common Issues</a></li></ul></li><li><a href=#conclusion>Conclusion</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Blog 3</h1><h1 id=dynamically-configuring-job-settings-with-aws-elemental-mediaconvert>Dynamically Configuring Job Settings with AWS Elemental MediaConvert</h1><p>AWS Elemental MediaConvert is a powerful video transcoding service that enables media organizations to convert video content into multiple formats optimized for different platforms and devices. While basic transcoding is straightforward, many production workflows require dynamic configuration of job settings based on input content characteristics, business rules, or customer requirements. This blog explores strategies for dynamically configuring MediaConvert jobs to create flexible, scalable video processing pipelines.</p><hr><h2 id=understanding-aws-elemental-mediaconvert>Understanding AWS Elemental MediaConvert</h2><p>AWS Elemental MediaConvert is a file-based video transcoding service designed for video-on-demand (VOD) workflows. It converts video content from source formats into multiple output formats suitable for different delivery platforms.</p><p><strong>Key Features:</strong></p><ul><li><strong>Flexible Input/Output</strong>: Supports 40+ input and output video formats</li><li><strong>Quality Processing</strong>: Industry-leading video quality at lower bitrates</li><li><strong>Batch Processing</strong>: Process multiple files efficiently</li><li><strong>Advanced Features</strong>: Motion graphics, audio mixing, caption handling</li><li><strong>Scalability</strong>: Handle unlimited concurrent transcoding jobs</li><li><strong>Cost-Effective</strong>: Pay only for the content you process</li></ul><p><strong>Common Use Cases:</strong></p><ul><li>Video-on-demand content preparation</li><li>Multi-quality format creation for adaptive streaming</li><li>Archive format conversion</li><li>Content normalization across platforms</li><li>Live event post-processing and archival</li></ul><hr><h2 id=the-challenge-static-vs-dynamic-configuration>The Challenge: Static vs. Dynamic Configuration</h2><h3 id=traditional-static-configuration>Traditional Static Configuration</h3><p>Most organizations start with static job templates that define fixed output specifications. While simple to implement, static configurations have limitations:</p><p><strong>Limitations:</strong></p><ul><li>Cannot adapt to different input video characteristics</li><li>One-size-fits-all approach may waste resources</li><li>Difficult to accommodate diverse content types</li><li>Manual adjustments required for special cases</li><li>Limited ability to optimize for business requirements</li></ul><p><strong>Example Static Scenario:</strong>
+All videos encoded at 1080p/30fps at 5 Mbps regardless of:</p><ul><li>Original resolution (could be 720p or 4K)</li><li>Original frame rate (24fps, 25fps, 60fps)</li><li>Content type (animation vs. live action)</li><li>Target platforms (mobile, web, TV)</li></ul><h3 id=dynamic-configuration-approach>Dynamic Configuration Approach</h3><p>Dynamic configuration adapts transcoding parameters based on input content and business rules, providing:</p><p><strong>Advantages:</strong></p><ul><li>Optimizes quality for each unique input</li><li>Reduces unnecessary processing costs</li><li>Enables content-aware encoding</li><li>Supports multiple delivery profiles</li><li>Automates complex decision-making</li><li>Scales efficiently across diverse content</li></ul><hr><h2 id=architecture-for-dynamic-mediaconvert-configuration>Architecture for Dynamic MediaConvert Configuration</h2><h3 id=high-level-workflow>High-Level Workflow</h3><pre tabindex=0><code>Input Analysis
+    ↓
+Extract Metadata
+    ↓
+Apply Business Rules
+    ↓
+Generate Job Configuration
+    ↓
+Submit MediaConvert Job
+    ↓
+Monitor &amp; Track
+    ↓
+Archive &amp; Distribute
+</code></pre><h3 id=components>Components</h3><p><strong>1. Input Monitoring</strong></p><ul><li>S3 event notifications trigger workflow</li><li>CloudWatch Events monitor source bucket</li><li>EventBridge routes events to processing pipeline</li></ul><p><strong>2. Content Analysis</strong></p><ul><li>Lambda function analyzes input video properties</li><li>MediaInfo or FFmpeg extracts detailed metadata</li><li>Determines resolution, frame rate, codec, bitrate</li></ul><p><strong>3. Decision Engine</strong></p><ul><li>AWS Step Functions orchestrates workflow</li><li>Evaluates metadata against business rules</li><li>Selects appropriate output profiles</li><li>Determines quality parameters</li></ul><p><strong>4. Job Configuration</strong></p><ul><li>Builds dynamic MediaConvert job definition</li><li>Applies quality presets based on analysis</li><li>Configures multiple outputs for different platforms</li><li>Sets up error handling and notifications</li></ul><p><strong>5. Job Submission</strong></p><ul><li>Submits configured job to MediaConvert</li><li>Tracks job progress and status</li><li>Implements retry logic for failures</li></ul><p><strong>6. Post-Processing</strong></p><ul><li>Move completed files to distribution locations</li><li>Update content catalog/database</li><li>Trigger downstream workflows</li><li>Generate delivery manifests</li></ul><hr><h2 id=implementation-strategies>Implementation Strategies</h2><h3 id=strategy-1-resolution-based-configuration>Strategy 1: Resolution-Based Configuration</h3><p>Adapt output quality based on input resolution to avoid upscaling.</p><p><strong>Decision Logic:</strong></p><pre tabindex=0><code>If input resolution &gt;= 4K (2160p):
+  - Create 4K, 1080p, 720p outputs
+  - Use higher bitrates for quality preservation
+
+Else if input resolution &gt;= 1080p:
+  - Create 1080p, 720p, 480p outputs
+  - Standard bitrate allocation
+
+Else if input resolution &gt;= 720p:
+  - Create 720p, 480p, 360p outputs
+  - Lower bitrates appropriate for source
+
+Else (&lt; 720p):
+  - Create single output at source resolution
+  - Minimal bitrate to avoid quality loss
+</code></pre><p><strong>Benefits:</strong></p><ul><li>Prevents unnecessary upscaling artifacts</li><li>Optimizes bitrate allocation</li><li>Reduces processing for lower-resolution content</li><li>Improves storage and delivery efficiency</li></ul><h3 id=strategy-2-frame-rate-normalization>Strategy 2: Frame Rate Normalization</h3><p>Handle variable input frame rates intelligently.</p><p><strong>Decision Logic:</strong></p><pre tabindex=0><code>Extract input frame rate
+
+If frame rate == 23.976 fps (film):
+  - Output at 24fps or 25fps
+  - Apply appropriate pulldown
+
+If frame rate == 29.97 fps (NTSC):
+  - Output at 30fps standard
+
+If frame rate == 59.94 fps (NTSC 60):
+  - Output at 60fps
+  - Create 30fps variant for compatibility
+
+If frame rate is variable:
+  - Normalize to closest standard
+  - Flag for manual review if uncertain
+</code></pre><p><strong>Benefits:</strong></p><ul><li>Handles broadcast frame rates correctly</li><li>Creates compatible outputs for all platforms</li><li>Prevents playback timing issues</li><li>Reduces file size where possible</li></ul><h3 id=strategy-3-content-type-based-configuration>Strategy 3: Content-Type-Based Configuration</h3><p>Different content types require different encoding strategies.</p><p><strong>Content Detection:</strong></p><pre tabindex=0><code>Analyze content characteristics:
+  - Scene complexity (histogram analysis)
+  - Motion detection (optical flow)
+  - Bitrate consistency (texture analysis)
+  - Black frames (scene detection)
+
+Classify as:
+  - Animated/Simple (lower bitrate adequate)
+  - Standard video (moderate bitrate)
+  - High-motion sports/action (higher bitrate)
+  - Talking-head/static (lower bitrate)
+</code></pre><p><strong>Encoding Parameters:</strong></p><pre tabindex=0><code>Animated Content:
+  - Lower bitrate (2-4 Mbps for 1080p)
+  - Moderate GOP size (8-10 seconds)
+  - Simple encoding profile
+
+Live Action:
+  - Standard bitrate (5-8 Mbps for 1080p)
+  - Balanced GOP size
+  - Balanced encoding
+
+High-Motion:
+  - Higher bitrate (8-12 Mbps for 1080p)
+  - Shorter GOP (6-8 seconds)
+  - Advanced encoding profile
+</code></pre><h3 id=strategy-4-multi-platform-output-configuration>Strategy 4: Multi-Platform Output Configuration</h3><p>Generate optimized outputs for different delivery platforms.</p><p><strong>Platform Profiles:</strong></p><pre tabindex=0><code>Web (Responsive):
+  - 1920x1080 @ 6 Mbps H.264
+  - 1280x720 @ 3 Mbps H.264
+  - 854x480 @ 1.5 Mbps H.264
+
+Mobile (Bandwidth-Constrained):
+  - 1280x720 @ 2.5 Mbps H.264
+  - 854x480 @ 1 Mbps H.264
+  - 640x360 @ 500 kbps H.264
+
+TV/Premium (High-Quality):
+  - 3840x2160 @ 20 Mbps HEVC
+  - 1920x1080 @ 8 Mbps HEVC
+  - 1280x720 @ 4 Mbps HEVC
+
+Social Media (Quick Share):
+  - 1280x720 @ 2.5 Mbps
+  - Square format 1080x1080 @ 2.5 Mbps
+  - Vertical 1080x1920 @ 2.5 Mbps
+</code></pre><hr><h2 id=building-the-decision-engine-with-aws-step-functions>Building the Decision Engine with AWS Step Functions</h2><h3 id=workflow-definition>Workflow Definition</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;StartAt&#34;</span>: <span style=color:#e6db74>&#34;AnalyzeInput&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;States&#34;</span>: {
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;AnalyzeInput&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;</span>: <span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Resource&#34;</span>: <span style=color:#e6db74>&#34;arn:aws:lambda:region:account:function:AnalyzeVideo&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Next&#34;</span>: <span style=color:#e6db74>&#34;EvaluateRules&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;EvaluateRules&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;</span>: <span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Resource&#34;</span>: <span style=color:#e6db74>&#34;arn:aws:lambda:region:account:function:EvaluateBusinessRules&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Next&#34;</span>: <span style=color:#e6db74>&#34;SelectProfile&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;SelectProfile&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;</span>: <span style=color:#e6db74>&#34;Choice&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Choices&#34;</span>: [
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Variable&#34;</span>: <span style=color:#e6db74>&#34;$.resolution&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;StringEquals&#34;</span>: <span style=color:#e6db74>&#34;4K&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Next&#34;</span>: <span style=color:#e6db74>&#34;Configure4KOutput&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Variable&#34;</span>: <span style=color:#e6db74>&#34;$.resolution&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;StringEquals&#34;</span>: <span style=color:#e6db74>&#34;1080p&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Next&#34;</span>: <span style=color:#e6db74>&#34;Configure1080pOutput&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Variable&#34;</span>: <span style=color:#e6db74>&#34;$.resolution&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;StringEquals&#34;</span>: <span style=color:#e6db74>&#34;720p&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Next&#34;</span>: <span style=color:#e6db74>&#34;Configure720pOutput&#34;</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      ],
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Default&#34;</span>: <span style=color:#e6db74>&#34;ConfigureDefaultOutput&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;Configure4KOutput&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;</span>: <span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Resource&#34;</span>: <span style=color:#e6db74>&#34;arn:aws:lambda:region:account:function:Build4KJobDefinition&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Next&#34;</span>: <span style=color:#e6db74>&#34;SubmitJob&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;Configure1080pOutput&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;</span>: <span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Resource&#34;</span>: <span style=color:#e6db74>&#34;arn:aws:lambda:region:account:function:Build1080pJobDefinition&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Next&#34;</span>: <span style=color:#e6db74>&#34;SubmitJob&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;Configure720pOutput&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;</span>: <span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Resource&#34;</span>: <span style=color:#e6db74>&#34;arn:aws:lambda:region:account:function:Build720pJobDefinition&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Next&#34;</span>: <span style=color:#e6db74>&#34;SubmitJob&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;ConfigureDefaultOutput&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;</span>: <span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Resource&#34;</span>: <span style=color:#e6db74>&#34;arn:aws:lambda:region:account:function:BuildDefaultJobDefinition&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Next&#34;</span>: <span style=color:#e6db74>&#34;SubmitJob&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;SubmitJob&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;</span>: <span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Resource&#34;</span>: <span style=color:#e6db74>&#34;arn:aws:states:::mediaconvert:createJob.sync&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Next&#34;</span>: <span style=color:#e6db74>&#34;JobSuccess&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;JobSuccess&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;</span>: <span style=color:#e6db74>&#34;Succeed&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=analysis-lambda-function>Analysis Lambda Function</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> json
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> boto3
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> subprocess
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>mediaconvert <span style=color:#f92672>=</span> boto3<span style=color:#f92672>.</span>client(<span style=color:#e6db74>&#39;mediaconvert&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>lambda_handler</span>(event, context):
+</span></span><span style=display:flex><span>    bucket <span style=color:#f92672>=</span> event[<span style=color:#e6db74>&#39;detail&#39;</span>][<span style=color:#e6db74>&#39;bucket&#39;</span>][<span style=color:#e6db74>&#39;name&#39;</span>]
+</span></span><span style=display:flex><span>    key <span style=color:#f92672>=</span> event[<span style=color:#e6db74>&#39;detail&#39;</span>][<span style=color:#e6db74>&#39;object&#39;</span>][<span style=color:#e6db74>&#39;key&#39;</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Get file information</span>
+</span></span><span style=display:flex><span>    s3_uri <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;s3://</span><span style=color:#e6db74>{</span>bucket<span style=color:#e6db74>}</span><span style=color:#e6db74>/</span><span style=color:#e6db74>{</span>key<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Extract metadata using ffprobe</span>
+</span></span><span style=display:flex><span>    metadata <span style=color:#f92672>=</span> extract_metadata(s3_uri)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;statusCode&#39;</span>: <span style=color:#ae81ff>200</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;bucket&#39;</span>: bucket,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;key&#39;</span>: key,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;resolution&#39;</span>: metadata[<span style=color:#e6db74>&#39;resolution&#39;</span>],
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;frameRate&#39;</span>: metadata[<span style=color:#e6db74>&#39;frameRate&#39;</span>],
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;codec&#39;</span>: metadata[<span style=color:#e6db74>&#39;codec&#39;</span>],
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;bitrate&#39;</span>: metadata[<span style=color:#e6db74>&#39;bitrate&#39;</span>],
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;duration&#39;</span>: metadata[<span style=color:#e6db74>&#39;duration&#39;</span>],
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;contentType&#39;</span>: classify_content(metadata)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>extract_metadata</span>(s3_uri):
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Use ffprobe to get detailed metadata</span>
+</span></span><span style=display:flex><span>    cmd <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;ffprobe&#39;</span>, <span style=color:#e6db74>&#39;-v&#39;</span>, <span style=color:#e6db74>&#39;error&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-select_streams&#39;</span>, <span style=color:#e6db74>&#39;v:0&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-show_entries&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;stream=width,height,r_frame_rate,codec_name,bit_rate&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-of&#39;</span>, <span style=color:#e6db74>&#39;csv=p=0&#39;</span>,
+</span></span><span style=display:flex><span>        s3_uri
+</span></span><span style=display:flex><span>    ]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    output <span style=color:#f92672>=</span> subprocess<span style=color:#f92672>.</span>check_output(cmd)<span style=color:#f92672>.</span>decode(<span style=color:#e6db74>&#39;utf-8&#39;</span>)
+</span></span><span style=display:flex><span>    parts <span style=color:#f92672>=</span> output<span style=color:#f92672>.</span>strip()<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#39;,&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    width, height <span style=color:#f92672>=</span> int(parts[<span style=color:#ae81ff>0</span>]), int(parts[<span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span>    resolution <span style=color:#f92672>=</span> determine_resolution(width, height)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;resolution&#39;</span>: resolution,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;width&#39;</span>: width,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;height&#39;</span>: height,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;frameRate&#39;</span>: float(parts[<span style=color:#ae81ff>2</span>]),
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;codec&#39;</span>: parts[<span style=color:#ae81ff>3</span>],
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;bitrate&#39;</span>: int(parts[<span style=color:#ae81ff>4</span>]) <span style=color:#66d9ef>if</span> parts[<span style=color:#ae81ff>4</span>] <span style=color:#66d9ef>else</span> <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;duration&#39;</span>: get_duration(s3_uri)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>determine_resolution</span>(width, height):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> width <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>3840</span> <span style=color:#f92672>or</span> height <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>2160</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;4K&#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>elif</span> width <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>1920</span> <span style=color:#f92672>or</span> height <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>1080</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;1080p&#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>elif</span> width <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>1280</span> <span style=color:#f92672>or</span> height <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>720</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;720p&#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;SD&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>classify_content</span>(metadata):
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Simplified classification</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># In production, use more sophisticated analysis</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> metadata[<span style=color:#e6db74>&#39;bitrate&#39;</span>] <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>1000000</span>:  <span style=color:#75715e># &lt; 1 Mbps</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;animation&#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>elif</span> metadata[<span style=color:#e6db74>&#39;frameRate&#39;</span>] <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>50</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;highmotion&#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;standard&#39;</span>
+</span></span></code></pre></div><hr><h2 id=real-world-use-cases>Real-World Use Cases</h2><h3 id=use-case-1-video-content-platform>Use Case 1: Video Content Platform</h3><p><strong>Scenario</strong>: Streaming platform receives user-uploaded content</p><p><strong>Workflow</strong>:</p><ol><li>User uploads video</li><li>System analyzes video properties</li><li>Based on resolution and duration:<ul><li>Determine appropriate quality ladder</li><li>Select encoding profiles</li></ul></li><li>Generate multiple outputs for adaptive streaming</li><li>Create thumbnails and preview images</li><li>Update content database</li></ol><p><strong>Result</strong>: Each video optimized for its characteristics, reducing storage and delivery costs.</p><h3 id=use-case-2-news-and-media-organization>Use Case 2: News and Media Organization</h3><p><strong>Scenario</strong>: Multiple content sources with varying specifications</p><p><strong>Workflow</strong>:</p><ol><li>Video ingested from broadcast feed, satellite feed, or social media</li><li>Analyze incoming video format and quality</li><li>Normalize to organization standards</li><li>Create archive version and broadcast-ready versions</li><li>Automatically distribute to appropriate platforms</li></ol><p><strong>Result</strong>: Consistent output quality across diverse sources.</p><h3 id=use-case-3-live-event-archival>Use Case 3: Live Event Archival</h3><p><strong>Scenario</strong>: Live broadcast needs immediate on-demand availability</p><p><strong>Workflow</strong>:</p><ol><li>Live stream captured and recorded</li><li>Post-broadcast analysis of recorded file</li><li>Optimize encoding based on actual content</li><li>Create multiple quality variants</li><li>Update VOD catalog</li><li>Distribute to platforms</li></ol><p><strong>Result</strong>: On-demand content ready quickly with optimal quality/size tradeoff.</p><hr><h2 id=best-practices-for-dynamic-configuration>Best Practices for Dynamic Configuration</h2><h3 id=1-metadata-extraction>1. Metadata Extraction</h3><ul><li>Use reliable tools (FFmpeg, MediaInfo)</li><li>Cache results to avoid re-analysis</li><li>Handle errors gracefully</li><li>Store metadata for future reference</li></ul><h3 id=2-business-rules-engine>2. Business Rules Engine</h3><ul><li>Keep rules version-controlled and documented</li><li>Implement A/B testing for new rules</li><li>Monitor rule effectiveness and adjust</li><li>Allow manual overrides when needed</li></ul><h3 id=3-job-configuration>3. Job Configuration</h3><ul><li>Use job templates as base</li><li>Programmatically modify only what&rsquo;s necessary</li><li>Validate configurations before submission</li><li>Implement dry-run capability</li></ul><h3 id=4-error-handling>4. Error Handling</h3><ul><li>Implement retry logic with exponential backoff</li><li>Log detailed error information</li><li>Create fallback configurations</li><li>Alert on repeated failures</li></ul><h3 id=5-monitoring-and-optimization>5. Monitoring and Optimization</h3><ul><li>Track metrics: processing time, cost, quality</li><li>Monitor encoder utilization</li><li>Identify optimization opportunities</li><li>Continuously refine rules based on data</li></ul><h3 id=6-cost-optimization>6. Cost Optimization</h3><ul><li>Right-size outputs based on content</li><li>Avoid unnecessary quality levels</li><li>Use tiered pricing for different content types</li><li>Archive non-critical versions to Glacier</li></ul><hr><h2 id=aws-services-integration>AWS Services Integration</h2><table><thead><tr><th style=text-align:left>Service</th><th style=text-align:left>Purpose</th></tr></thead><tbody><tr><td style=text-align:left>S3</td><td style=text-align:left>Source and output storage</td></tr><tr><td style=text-align:left>EventBridge</td><td style=text-align:left>Trigger workflow on file upload</td></tr><tr><td style=text-align:left>Lambda</td><td style=text-align:left>Content analysis and rule evaluation</td></tr><tr><td style=text-align:left>Step Functions</td><td style=text-align:left>Orchestrate workflow</td></tr><tr><td style=text-align:left>MediaConvert</td><td style=text-align:left>Perform video transcoding</td></tr><tr><td style=text-align:left>CloudWatch</td><td style=text-align:left>Monitor metrics and logs</td></tr><tr><td style=text-align:left>SNS</td><td style=text-align:left>Send notifications</td></tr><tr><td style=text-align:left>DynamoDB</td><td style=text-align:left>Store configuration rules</td></tr><tr><td style=text-align:left>CloudFormation</td><td style=text-align:left>Infrastructure as code</td></tr></tbody></table><hr><h2 id=performance-considerations>Performance Considerations</h2><h3 id=processing-efficiency>Processing Efficiency</h3><table><thead><tr><th style=text-align:left>Factor</th><th style=text-align:left>Impact</th></tr></thead><tbody><tr><td style=text-align:left>Input Resolution</td><td style=text-align:left>Higher resolution requires more processing</td></tr><tr><td style=text-align:left>Duration</td><td style=text-align:left>Longer videos take proportionally longer</td></tr><tr><td style=text-align:left>Output Count</td><td style=text-align:left>Each output adds processing time</td></tr><tr><td style=text-align:left>Complexity</td><td style=text-align:left>More outputs = longer job time</td></tr></tbody></table><h3 id=cost-optimization>Cost Optimization</h3><pre tabindex=0><code>Cost Factors:
+- Processing time (largest cost component)
+- Output resolution (higher = higher cost)
+- Number of outputs (linear scaling)
+- Premium features (advanced encoding, captions)
+
+Cost Reduction:
+- Analyze input to avoid unnecessary outputs
+- Skip outputs not needed for distribution
+- Use efficient codecs (HEVC vs H.264)
+- Schedule transcoding during off-peak hours
+</code></pre><hr><h2 id=troubleshooting-and-monitoring>Troubleshooting and Monitoring</h2><h3 id=common-issues>Common Issues</h3><p><strong>Issue: Incorrect Resolution Detection</strong></p><ul><li>Solution: Validate metadata extraction</li><li>Solution: Implement manual override capability</li><li>Solution: Review sample outputs for accuracy</li></ul><p><strong>Issue: Job Configuration Errors</strong></p><ul><li>Solution: Validate job definition before submission</li><li>Solution: Implement schema validation</li><li>Solution: Test with sample files</li></ul><p><strong>Issue: Performance Bottlenecks</strong></p><ul><li>Solution: Monitor Step Functions execution time</li><li>Solution: Parallelize independent tasks</li><li>Solution: Optimize metadata extraction</li></ul><p><strong>Issue: Unexpected Costs</strong></p><ul><li>Solution: Track output configurations</li><li>Solution: Monitor number of jobs and outputs</li><li>Solution: Review and optimize rules regularly</li></ul><hr><h2 id=conclusion>Conclusion</h2><p>Dynamically configuring AWS Elemental MediaConvert jobs enables organizations to:</p><ul><li><strong>Optimize Quality</strong>: Adapt encoding to input content characteristics</li><li><strong>Reduce Costs</strong>: Eliminate unnecessary processing and storage</li><li><strong>Scale Efficiently</strong>: Handle diverse content types automatically</li><li><strong>Improve Automation</strong>: Reduce manual intervention and errors</li><li><strong>Enable Innovation</strong>: Support new platforms and formats easily</li></ul><p>By combining AWS Elemental MediaConvert with Lambda, Step Functions, and intelligent decision engines, media organizations can build sophisticated, scalable video processing pipelines that adapt to business needs and content characteristics.</p><p>The future of video transcoding is intelligent, automated, and optimized—making MediaConvert&rsquo;s dynamic configuration capabilities essential for modern media workflows.</p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/fcj-workshop/3-blogstranslated/3.2-blog2/ title="Blog 2"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/fcj-workshop/4-eventparticipated/ title="Events Participated" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/fcj-workshop/js/clipboard.min.js?1765299868></script><script src=/fcj-workshop/js/perfect-scrollbar.min.js?1765299868></script><script src=/fcj-workshop/js/perfect-scrollbar.jquery.min.js?1765299868></script><script src=/fcj-workshop/js/jquery.sticky.js?1765299868></script><script src=/fcj-workshop/js/featherlight.min.js?1765299868></script><script src=/fcj-workshop/js/highlight.pack.js?1765299868></script><script>hljs.initHighlightingOnLoad()</script><script src=/fcj-workshop/js/modernizr.custom-3.6.0.js?1765299868></script><script src=/fcj-workshop/js/learn.js?1765299868></script><script src=/fcj-workshop/js/hugo-learn.js?1765299868></script><link href=/fcj-workshop/mermaid/mermaid.css?1765299868 rel=stylesheet><script src=/fcj-workshop/mermaid/mermaid.js?1765299868></script><script>mermaid.initialize({startOnLoad:!0})</script><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,(e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date),(i=t.createElement(n),a=t.getElementsByTagName(n)[0]),i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-158079754-2","auto"),ga("send","pageview")</script></body></html>
